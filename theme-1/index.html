@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Coming soon</title>
+    <style>
+
+      html,body{
+        position: absolute;
+        width: 100%;
+        height:100%;
+        background-color:hsl(0, 0%, 0%);
+        color: white;
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Quicksand', sans-serif;
+        background-image: url('');
+        background-repeat: no-repeat;        
+        background-position: center;
+        background-size: cover;
+        backdrop-filter: saturate(180%) blur(10px);
+      }
+
+
+
+      .logo{
+        position: relative;
+        width: 20vw;
+        height: 20vw;
+        margin-top: 100px;
+        left: 40%;
+        right: 35%;
+        background-image: url('../assets/logo.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+
+      .main-word{
+        color: #45a789; 
+        font-size: 110px;
+        text-align:center;
+        margin-top: 30px;
+        font-family: 'Quicksand', sans-serif;
+
+      }
+
+
+    .main-word span{
+      color: #45a789; 
+      animation: dots 2s ease-in-out infinite;
+    }
+
+    .main-word span:nth-child(1){
+    animation-delay: 0s;
+    }
+    .main-word span:nth-child(2){
+    animation-delay: 0.4s;
+    }
+
+
+    .main-word span:nth-child(3){
+      animation-delay: 0.8s;
+    }
+
+      @keyframes dots{
+          50%{
+            opacity: 0;
+          }
+       }
+   
+      .sec-word{
+        color: #28584a; 
+        font-size: 20px;
+        text-align:center;
+        margin-top:50px;
+        font-family: 'Quicksand', sans-serif;
+      }
+
+
+
+      .burger-menu{
+        position: absolute;
+        width: 45px;
+        height: auto;
+        left: 50px;
+        top: 50px;
+        cursor: pointer;
+      }
+
+      .burger-menu:hover div{
+          background-color: #255748;
+      }
+
+      .burger-menu .line-1{
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 2px;
+        margin-top: 7px;
+        border-radius: 10px;
+        background-color: #45a789;
+        transition: 0.3s;
+        animation: line 2s ease-in-out 6s ;
+      }
+
+      .burger-menu .line-2{
+        position: relative;
+        float: left;
+        width: 80%;
+        height: 2px;
+        margin-top: 7px;
+        border-radius: 5px;
+        background-color: #45a789;
+        transition: 0.3s;
+        animation: line 2s ease-in-out 6.5s ;
+      }
+
+      .burger-menu .line-3{
+        position: relative;
+        float: left;
+        width: 50%;
+        height: 2px;
+        margin-top: 7px;
+        border-radius: 5px;
+        background-color: #45a789;
+        transition: 0.3s;
+        animation: line 2s ease-in-out 7s ;
+      }
+
+      .menu{
+        position: fixed;
+        background-color: rgba(25, 25, 25,0.8);
+        backdrop-filter: saturate(180%) blur(10px);
+        width: 450px;
+        height: 100%;
+        transform: translateX(-200%);
+        transition: 0.5s;
+        z-index: 20;
+        overflow-y: scroll;
+        transition: 0.3s;
+        scroll-behavior: smooth;
+      }
+
+
+      .menu::-webkit-scrollbar {
+        display: none;
+      }
+
+      .menu {
+        -ms-overflow-style: none;
+      }
+
+
+
+      .show-menu{
+        transform: translateX(0%);
+        transition: 0.5s;
+      }
+
+
+      .close-menu-btn{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        right: 5%;
+        top: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 25px;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: 2px;
+      }
+
+
+      .close-menu-btn:hover{
+        color: rgb(255, 92, 80);
+      }
+      
+      #container {
+        /* position: relative;
+        width: 20vw;
+        height: 2px;
+        left: 40vw;
+        height: 5px;*/
+        margin-top: 60px;
+        width: 20vw;
+        left: 40vw;
+      }
+
+      #container .progressbar-text{
+        position: relative;
+        width: 100%;
+        font-size: 20px !important;
+        margin-top: 30px !important;
+        text-align: center;
+      }
+    
+
+      .card{
+        position: relative;
+        display: inline-block;
+        width: 85%;
+        padding:2.5%;
+        left: 5%;
+        right: 5%;
+        height: auto;
+        margin-top: 20px ;
+        margin-bottom: 20px;
+      }
+
+
+      .card label{
+        width: 95%;
+        font-size: 35px;
+        color:  #45a789;
+      }
+
+
+      .card div{
+        width: 100%;
+        font-size: 17px;
+        margin-top: 25px;
+        color: white;
+      }
+
+      .social{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 30px;
+      }
+
+      .social a{
+        text-decoration: none;
+        outline: none;
+        font-size: 30px;
+        transition: 0.3s;
+        color: white;
+        width: 17%;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        background-color: #45a789;
+        transition: 0.3s;
+        border-radius: 1px;
+      }
+
+
+      .social a:hover{
+        color: black;
+      }
+
+    
+    
+      .images-grid{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+
+      .row{
+        position: relative;
+        width: 100%;
+        height: 165px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+
+    .column{
+      position: relative;
+      background-color: coral;
+      width: 48% !important;
+      height: 165px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden
+    }
+
+
+    .img{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+
+    @media (min-width: 375px) and (max-width: 767px) {
+      
+      .logo{
+        width: 50vw;
+        height: 50vw;
+        left: 25vw;
+        margin-top: 150px;
+      }
+
+      .main-word{
+        font-size: 40px;
+      }
+
+      .sec-word{
+        font-size: 15px;
+      }
+
+      .menu{
+        width: 100%;
+      }
+    
+      .burger-menu{
+        position: absolute;
+        width: 45px;
+        height: auto;
+        left: 25px;
+        top: 25px;
+        cursor: pointer;
+      }
+      
+      #container {
+        margin-top: 60px;
+        width: 50vw;
+        left: 25vw;
+      }
+
+      .social a{
+        width: 17%;
+        height: 50px;
+      }
+
+    }
+
+
+ 
+    @media (min-width: 768px) and (max-width: 1024px) {
+  
+    
+      .logo{
+        
+        margin-top: 300px;
+      }
+    }
+
+
+    </style>
+  
+
+  </head>
+  <body >
+    
+
+
+<div class="burger-menu" id="menu-btn">
+<div class="line-1"></div>
+<div class="line-2"></div>
+<div class="line-3"></div>
+</div>
+
+
+<div class="menu"  id="menu">
+
+  <div class="close-menu-btn" id="close-btn">
+    <i class="fas fa-times"></i>
+  </div>
+  
+
+  <div class="card" style="margin-top: 100px;">
+        <label > About us</label>
+        <div>
+            Hello world ! this template was made with love and passion with a modern tocuh, in this section you but a brefi description of you website or busniess  
+            Hello world ! this template was made with love and passion with a modern tocuh, in this section you but a brefi description of you website or busniess .
+
+        </div>
+  </div>
+
+  <div class="card">
+    <label > How we work ?</label>
+    <div>
+        Hello world ! this template was made with love and passion with a modern tocuh, in this section you but a brefi description of you website or busniess  
+        Hello world ! this template was made with love and passion with a modern tocuh, in this section you but a brefi description of you website or busniess .
+
+    </div>
+  </div>
+
+
+  <div class="card">
+    <label > Our Products</label>
+    <div>
+       <div class="images-grid">
+           <div class="row">  
+            <div class="column">
+                    <img class="img" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MV7N2?wid=1144&hei=1144&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1551489688005" alt="">
+            </div>  
+            <div class="column">
+              <img class="img" src="https://media.wired.com/photos/5a3030635a2d9a4a532ba9d3/master/w_2176,h_1632,c_limit/applewatchreview-IL.jpg" alt="">
+            </div>
+          </div>
+           <div class="row">  
+            <div class="column">
+              <img class="img" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone11-select-2019-family?wid=882&amp;hei=1058&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1567022175704" alt="">
+            </div>  
+            <div class="column">
+              <img src="https://www.sv-comp.com/image/cache/catalog/Apple/Macbook%20Pro%202018%20-%20Silver/1-800x800.jpg" alt="" class="img">
+            </div>   
+          </div>
+           <div class="row">  
+            <div class="column">
+             <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/apple-tv-hero-select-201510_FMT_WHH?wid=670&amp;hei=660&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1503607251341" alt="" class="img">
+
+            </div>  
+            <div class="column">
+              <img src="https://www.apple.com/v/apple-tv-plus/e/images/meta/og__bzi4j9f2gk5e.png?201912191734" alt="" class="img">
+            </div>   
+          </div>
+
+       </div>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <label > Get in touch</label>
+    <div class="social">
+           
+      <a href="">
+        <i class="fab fa-twitter"></i>
+      </a>
+      
+      <a href="">
+        <i class="fab fa-instagram"></i>     
+       </a>
+
+
+      <a href="">
+        <i class="fab fa-snapchat-ghost"></i>
+      </a>
+
+
+      <a href="">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+
+      <a href="">
+        <i class="fas fa-envelope"></i>      
+    </a>
+
+
+
+
+    </div>
+  </div>
+  
+</div>
+
+
+
+
+<div class="logo">
+        
+</div>
+
+
+<div  class="main-word">
+Coming soon <span>.</span><span>.</span><span>.</span>
+</div>
+
+
+<div class="sec-word">
+Great things take time , wait for us
+</div>
+
+
+
+<!-- <div class="progress"id="container">
+</div> -->
+
+
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/1.1.0/dist/progressbar.js"></script>
+<script>menuButton = document.getElementById('menu-btn');menu = document.getElementById('menu');closeMenuBtn = document.getElementById('close-btn');menuButton.addEventListener('click',()=>{menu.classList.add('show-menu');});closeMenuBtn.addEventListener('click',()=>{menu.classList.remove('show-menu');});</script>
+</body>
+</html>
+<script>
+
+  // Change the color codes below to your personal colors . 
+  colors = {
+  backgroundColor : "",
+  labelFontColor : "",
+  textFontColor : "",
+  menuButtonColor : "" ,
+  menuButtonOnHoverColor : "",
+  menuBackgroundColor : "",
+  menuCloseBtnColor : "",
+  menuCloseBtnOnHoverColor : "",
+  progressBarStartColor : "",
+  progressBarEndColor : "",
+  progressBarBackgroundColor : "",
+  }
+ 
+
+ 
+
+function update(colorsObj){
+
+
+  backgroundColor = colorsObj.backgroundColor,
+  labelFontColor = colorsObj.labelFontColor,
+  textFontColor = colorsObj.textFontColor,
+  menuButtonColor = colorsObj.menuButtonColor ,
+  menuButtonOnHoverColor = colorsObj.menuButtonOnHoverColor,
+  menuBackgroundColor = colorsObj.menuBackgroundColor,
+  menuCloseBtnColor = colorsObj.menuCloseBtnColor,
+  menuCloseBtnOnHoverColor = colorsObj.menuCloseBtnOnHoverColor,
+  progressBarStartColor = colorsObj.progressBarStartColor,
+  progressBarEndColor = colorsObj.progressBarEndColor,
+  progressBarBackgroundColor = colorsObj.progressBarBackgroundColor,
+
+
+  sideMenuLabels = document.querySelectorAll(".card label");
+sideMenuParagraphs = document.querySelectorAll(".card div");
+for(i = 0 ;i < sideMenuLabels.length ; i++){
+  sideMenuLabels[i].style.color = labelFontColor;
+  sideMenuParagraphs[i].style.color = textFontColor;
+}
+menuBackgroundColor = converColorCodeToRGB(menuBackgroundColor) ? converColorCodeToRGB(menuBackgroundColor).split(")")[0]+",0.8)" :  menuBackgroundColor; 
+document.getElementById("menu").style.backgroundColor = menuBackgroundColor;
+style = document.getElementsByTagName("style")[0];
+css =  `.burger-menu:hover div{
+          background-color: ${menuButtonOnHoverColor} !important;
+          }
+         .close-menu-btn:hover {
+            color: ${menuCloseBtnOnHoverColor} !important;
+          }
+
+          .social a:hover{
+            color: ${menuButtonOnHoverColor} !important;
+          }
+
+          `;
+style.appendChild(document.createTextNode(css));
+
+document.getElementsByClassName("close-menu-btn")[0].style.color = menuCloseBtnColor ;
+
+document.getElementsByTagName('body')[0].style.backgroundColor = backgroundColor;
+document.getElementsByClassName('main-word')[0].style.color = labelFontColor; 
+dots = document.querySelectorAll('.main-word span');
+for(i = 0 ; i < dots.length ; i++){
+    dots[i].style.color = labelFontColor;
+}
+document.getElementsByClassName('sec-word')[0].style.color = textFontColor;
+menuBtnLines = document.querySelectorAll('#menu-btn div');
+for(i = 0 ; i < menuBtnLines.length ; i++){
+  menuBtnLines[i].style.backgroundColor = menuButtonColor;
+}
+
+window.onload = function onLoad() {
+//SemiCircle
+var bar = new ProgressBar.Line(container, {
+strokeWidth: 2,
+color: progressBarStartColor,
+trailColor: progressBarBackgroundColor,
+trailWidth: 1,
+easing: 'easeInOut',
+duration: 5000,
+svgStyle: null,
+text: {
+  value: '',
+  alignToBottom: false
+},
+from: {color: progressBarStartColor},
+to: {color: progressBarEndColor},
+
+// Set default step function for all animate calls
+step: (state, bar) => {
+  bar.path.setAttribute('stroke', state.color);
+  var value = Math.round(bar.value() * 100);
+  if (value === 0) {
+    bar.setText('');
+  } else {
+    bar.setText(value+'\n %');
+  }
+
+  bar.text.style.color = state.color;
+}
+});
+bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+bar.text.style.fontSize = '2rem';
+   bar.animate(0.87)
+};
+
+column = document.getElementsByClassName("column");
+
+for(i=0 ; i <column.length ; i++){
+  column[i].style.backgroundColor = textFontColor;
+}
+
+social = document.querySelectorAll('.social a');
+
+for(i = 0 ; i < social.length ; i++){
+  social[i].style.backgroundColor = labelFontColor;
+  social[i].style.color = backgroundColor;
+
+}
+
+
+}
+
+function converColorCodeToRGB(color){
+
+
+  
+  color  = color.replace(/\s/g, '');
+  if(color.charAt(0) == "#" ){
+    
+    result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(color);
+    color = result ? {
+     r: parseInt(result[1], 16),
+     g: parseInt(result[2], 16),
+     b: parseInt(result[3], 16)
+    } : false;
+    color = `rgb(${color.r},${color.g},${color.b})`;
+    return color;
+  }else if(color.substring(0,3).toUpperCase() === "HSL" ){
+
+    color = color.split(",");
+
+    h = Number(color[0].split("(")[1]);
+    s = Number(color[1].split("%")[0]);
+    l = Number(color[2].split("%")[0]);
+
+    s /= 100;
+  l /= 100;
+
+  let c = (1 - Math.abs(2 * l - 1)) * s,
+      x = c * (1 - Math.abs((h / 60) % 2 - 1)),
+      m = l - c/2,
+      r = 0,
+      g = 0,
+      b = 0;
+
+
+    if (0 <= h && h < 60) {
+    r = c; g = x; b = 0;
+  } else if (60 <= h && h < 120) {
+    r = x; g = c; b = 0;
+  } else if (120 <= h && h < 180) {
+    r = 0; g = c; b = x;
+  } else if (180 <= h && h < 240) {
+    r = 0; g = x; b = c;
+  } else if (240 <= h && h < 300) {
+    r = x; g = 0; b = c;
+  } else if (300 <= h && h < 360) {
+    r = c; g = 0; b = x;
+  }
+  r = Math.round((r + m) * 255);
+  g = Math.round((g + m) * 255);
+  b = Math.round((b + m) * 255);
+
+  return "rgb(" + r + "," + g + "," + b + ")";
+    
+
+  }else if(color.substring(0,3).toUpperCase() === "RGB" ){
+
+
+    return color;
+
+  }else{
+
+    
+    var colours = {
+    "aliceblue":"#f0f8ff","antiquewhite":"#faebd7","aqua":"#00ffff","aquamarine":"#7fffd4","azure":"#f0ffff",
+    "beige":"#f5f5dc","bisque":"#ffe4c4","black":"#000000","blanchedalmond":"#ffebcd","blue":"#0000ff","blueviolet":"#8a2be2","brown":"#a52a2a","burlywood":"#deb887",
+    "cadetblue":"#5f9ea0","chartreuse":"#7fff00","chocolate":"#d2691e","coral":"#ff7f50","cornflowerblue":"#6495ed","cornsilk":"#fff8dc","crimson":"#dc143c","cyan":"#00ffff",
+    "darkblue":"#00008b","darkcyan":"#008b8b","darkgoldenrod":"#b8860b","darkgray":"#a9a9a9","darkgreen":"#006400","darkkhaki":"#bdb76b","darkmagenta":"#8b008b","darkolivegreen":"#556b2f",
+    "darkorange":"#ff8c00","darkorchid":"#9932cc","darkred":"#8b0000","darksalmon":"#e9967a","darkseagreen":"#8fbc8f","darkslateblue":"#483d8b","darkslategray":"#2f4f4f","darkturquoise":"#00ced1",
+    "darkviolet":"#9400d3","deeppink":"#ff1493","deepskyblue":"#00bfff","dimgray":"#696969","dodgerblue":"#1e90ff",
+    "firebrick":"#b22222","floralwhite":"#fffaf0","forestgreen":"#228b22","fuchsia":"#ff00ff",
+    "gainsboro":"#dcdcdc","ghostwhite":"#f8f8ff","gold":"#ffd700","goldenrod":"#daa520","gray":"#808080","green":"#008000","greenyellow":"#adff2f",
+    "honeydew":"#f0fff0","hotpink":"#ff69b4",
+    "indianred ":"#cd5c5c","indigo":"#4b0082","ivory":"#fffff0","khaki":"#f0e68c",
+    "lavender":"#e6e6fa","lavenderblush":"#fff0f5","lawngreen":"#7cfc00","lemonchiffon":"#fffacd","lightblue":"#add8e6","lightcoral":"#f08080","lightcyan":"#e0ffff","lightgoldenrodyellow":"#fafad2",
+    "lightgrey":"#d3d3d3","lightgreen":"#90ee90","lightpink":"#ffb6c1","lightsalmon":"#ffa07a","lightseagreen":"#20b2aa","lightskyblue":"#87cefa","lightslategray":"#778899","lightsteelblue":"#b0c4de",
+    "lightyellow":"#ffffe0","lime":"#00ff00","limegreen":"#32cd32","linen":"#faf0e6",
+    "magenta":"#ff00ff","maroon":"#800000","mediumaquamarine":"#66cdaa","mediumblue":"#0000cd","mediumorchid":"#ba55d3","mediumpurple":"#9370d8","mediumseagreen":"#3cb371","mediumslateblue":"#7b68ee",
+    "mediumspringgreen":"#00fa9a","mediumturquoise":"#48d1cc","mediumvioletred":"#c71585","midnightblue":"#191970","mintcream":"#f5fffa","mistyrose":"#ffe4e1","moccasin":"#ffe4b5",
+    "navajowhite":"#ffdead","navy":"#000080",
+    "oldlace":"#fdf5e6","olive":"#808000","olivedrab":"#6b8e23","orange":"#ffa500","orangered":"#ff4500","orchid":"#da70d6",
+    "palegoldenrod":"#eee8aa","palegreen":"#98fb98","paleturquoise":"#afeeee","palevioletred":"#d87093","papayawhip":"#ffefd5","peachpuff":"#ffdab9","peru":"#cd853f","pink":"#ffc0cb","plum":"#dda0dd","powderblue":"#b0e0e6","purple":"#800080",
+    "rebeccapurple":"#663399",
+    "red":"#ff0000","rosybrown":"#bc8f8f","royalblue":"#4169e1",
+    "saddlebrown":"#8b4513","salmon":"#fa8072","sandybrown":"#f4a460","seagreen":"#2e8b57","seashell":"#fff5ee","sienna":"#a0522d","silver":"#c0c0c0","skyblue":"#87ceeb","slateblue":"#6a5acd","slategray":"#708090","snow":"#fffafa","springgreen":"#00ff7f","steelblue":"#4682b4",
+    "tan":"#d2b48c","teal":"#008080","thistle":"#d8bfd8","tomato":"#ff6347","turquoise":"#40e0d0",
+    "violet":"#ee82ee",
+    "wheat":"#f5deb3","white":"#ffffff","whitesmoke":"#f5f5f5",
+    "yellow":"#ffff00","yellowgreen":"#9acd32"};
+
+
+    if (typeof colours[color.toLowerCase()] != 'undefined'){
+        color = colours[color.toLowerCase()];
+        result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(color);
+        color = result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+        } : false;
+      color = `rgb(${color.r},${color.g},${color.b})`;
+      return color;
+    }
+      console.log("worng color code format you must use RGB or HSL or # hex code format");
+      return false;
+    
+    
+  }
+}
+
+update(colors);
+
+
+
+</script>
