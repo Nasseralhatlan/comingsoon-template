@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coming sson</title>
+    <style>
+
+        body,html{
+        position: absolute;
+        width: 100%;
+        height:100%;
+        background-color:rgb(0, 0, 0);
+        color: rgb(255, 238, 238);
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Quicksand', sans-serif;        
+       }
+
+       .img{
+           position: fixed;
+           width: 50%;
+           height: 100%;
+           margin: 0px;
+           padding: 0px;
+           left: 50%;
+           top: 0px;
+           background-color: rgb(0, 0, 0);
+           background-image: url('../assets/backgrounds/bg1.jpg');
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: cover;
+       }
+
+
+       .main{
+           position: fixed;
+           width: 40%;
+           padding: 5%;
+           height: 90%;
+           margin: 0px;
+           left: 0px;
+           top: 0px;
+           background-color: rgb(0, 0, 0);
+       }
+
+       .main .top{
+           position: relative;
+           width: 95%;
+           margin-right: 2.5%;
+           margin-left: 2.5%;
+           height: 65%;
+           margin-top: 2.5%;
+           margin-bottom: 2.5%;
+           float: left;
+           font-size: 80px;
+       }
+
+       .main .top label{
+          background: -webkit-linear-gradient(#db1a6e,#ff7f50);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+       }
+
+        .main span{
+        animation: dots 2s ease-in-out infinite;
+        }
+        .main .span-1{
+        animation-delay: 0s;
+        }
+        .main .span-2{
+         animation-delay: 0.4s;
+        }
+        .main .span-3{
+         animation-delay: 0.8s;
+        }
+
+        @keyframes dots{
+            50%{
+                opacity: 0;
+            }
+        }
+
+
+
+       .main .bottom{
+           position: relative;
+           width: 95%;
+           margin-right: 2.5%;
+           margin-left: 2.5%;
+           height: 15%;
+           margin-top: 7.5%;
+           margin-bottom: 7.5%;
+           float: left;
+           display: flex;
+           flex-direction: row;
+           justify-content: space-around;
+           font-size: 35px;
+       }
+
+       .main .bottom a{
+        position: relative;
+        height: 100%;
+        outline: none;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        color: white;
+        transition: 0.3s;
+       }
+
+
+       .main .bottom a i:hover{
+        transition: 0.3s;
+       }
+
+       .main .bottom a .t:hover{
+           color: #00acee;
+       }
+
+       .main .bottom a .i:hover{
+           color: #b43a73;
+       }
+
+
+       .main .bottom a .s:hover{
+           color: #fffc00;
+       }
+
+
+       .main .bottom a .f:hover{
+           color: #3b5998;
+       }
+
+
+       .main .bottom a .m:hover{
+           color: #D44638;
+       }
+
+        /* phones */
+       @media (min-width: 375px) and (max-width: 767px) {
+        .img{
+           position: absolute;
+           width: 100%;
+           height: 100%;
+           margin: 0px;
+           padding: 0px;
+           left: 0%;
+           top: 0px;
+           background-color: rgb(0, 0, 0);
+           background-image: url('../assets/backgrounds/bg1.jpg');
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: cover;
+       }
+
+
+       .main{
+           position: absolute;
+           width: 90%;
+           padding:0px;
+           padding-top: 5%;
+           padding-left: 5%;
+           padding-right: 5%;
+           height: 100%;
+           margin: 0px;
+           left: 0px;
+           top: 0%;
+           background-color: rgb(0, 0, 0,0.8);
+           z-index: 10;
+       }
+
+       .main .top{
+           position: relative;
+           width: 95%;
+           margin-right: 2.5%;
+           margin-left: 2.5%;
+           height: 80%;
+           float: left;
+           font-size: 40px;
+       }
+
+
+       .main .bottom{
+           position: relative;
+           width: 95%;
+           margin-right: 2.5%;
+           margin-left: 2.5%;
+           height: 5%;
+           margin-top: 10%;
+           margin-bottom: 5%;
+           float: left;
+           display: flex;
+           flex-direction: row;
+           justify-content: space-around;
+           font-size: 30px;
+       }
+
+       
+       }
+
+        /* tablates */
+       @media (min-width: 768px) and (max-width: 1030px) {
+
+        .img{
+           position: absolute;
+           width: 100%;
+           height: 100%;
+           margin: 0px;
+           padding: 0px;
+           left: 0%;
+           top: 0px;
+           background-color: rgb(0, 0, 0);
+           background-image: url('../assets/backgrounds/bg1.jpg');
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: cover;
+       }
+
+
+       .main{
+           position: absolute;
+           width: 90%;
+           padding:0px;
+           padding-top: 5%;
+           padding-left: 5%;
+           padding-right: 5%;
+           height: 100%;
+           margin: 0px;
+           left: 0px;
+           top: 0%;
+           background-color: rgb(0, 0, 0,0.8);
+           z-index: 10;
+       }
+
+       .main .top{
+           position: relative;
+           width: 95%;
+           margin-right: 2.5%;
+           margin-left: 2.5%;
+           height: 70%;
+           float: left;
+           font-size: 60px;
+       }
+
+
+       .main .bottom{
+           position: relative;
+           width: 95%;
+           margin-right: 2.5%;
+           margin-left: 2.5%;
+           height: 10%;
+           margin-top: 10%;
+           margin-bottom: 10%;
+           float: left;
+           display: flex;
+           flex-direction: row;
+           justify-content: space-around;
+           font-size: 45px;
+       }
+
+
+
+       }
+    </style>
+</head>
+<body>
+
+    <div class="img"> 
+
+    </div>
+
+    
+    <div class="main">
+        <class class="top">
+             <label>Apple</label>  <br>is a great idea being built , wait for us
+             <span class="span-1">.</span>
+              <span class="span-2">.</span>
+              <span class="span-3">.</span>
+        </class>
+        <class class="bottom">
+            <a href="">
+                <i class="fab fa-twitter t"></i>
+              </a>
+              
+              <a href="">
+                <i class="fab fa-instagram i"></i>     
+               </a>
+        
+        
+              <a href="">
+                <i class="fab fa-snapchat-ghost s"></i>
+              </a>
+        
+        
+              <a href="">
+                <i class="fab fa-facebook-f f"></i>
+              </a>
+        
+              <a href="">
+                <i class="fas fa-envelope m"></i>      
+            </a>
+        </class>
+    </div>
+     
+  
+
+
+</body>
+</html>
