@@ -6,8 +6,13 @@ html,body{
     margin: 0px;
     padding: 0px;
     scroll-behavior: smooth;  
+    scrollbar-width: 0px;
+    scrollbar-color: black;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
 
 #sort-btn{
     position: fixed;
@@ -94,6 +99,8 @@ html,body{
     position: relative;
     display: inline-block;
     float: left;
+    width: fit-content;
+    height: fit-content;
 }
 
 .section .wrapper{
@@ -300,3 +307,184 @@ html,body{
 .img-40{
     background-image: url('./theme-40/placeholder.png');
 }
+
+.img-41{
+    background-image: url('./theme-41/placeholder.png');
+
+}
+
+.img-42{
+    background-image: url('./theme-42/placeholder.png');
+}
+
+.img-43{
+    background-image: url('./theme-43/placeholder.png');
+    }
+    .img-44{
+    background-image: url('./theme-44/placeholder.png');
+    }
+    .img-45{
+    background-image: url('./theme-45/placeholder.png');
+    }
+    .img-46{
+    background-image: url('./theme-46/placeholder.png');
+    }
+    .img-47{
+    background-image: url('./theme-47/placeholder.png');
+    }
+    .img-48{
+    background-image: url('./theme-48/placeholder.png');
+    }
+    .img-49{
+    background-image: url('./theme-49/placeholder.png');
+    }
+    .img-50{
+    background-image: url('./theme-50/placeholder.png');
+    }
+    .img-51{
+    background-image: url('./theme-51/placeholder.png');
+    }
+    .img-52{
+    background-image: url('./theme-52/placeholder.png');
+    }
+    .img-53{
+    background-image: url('./theme-53/placeholder.png');
+    }
+    .img-54{
+    background-image: url('./theme-54/placeholder.png');
+    }
+    .img-55{
+    background-image: url('./theme-55/placeholder.png');
+    }
+    .img-56{
+    background-image: url('./theme-56/placeholder.png');
+    }
+    .img-57{
+    background-image: url('./theme-57/placeholder.png');
+    }
+    .img-58{
+    background-image: url('./theme-58/placeholder.png');
+    }
+    .img-59{
+    background-image: url('./theme-59/placeholder.png');
+    }
+    .img-60{
+    background-image: url('./theme-60/placeholder.png');
+    }
+    .img-61{
+    background-image: url('./theme-61/placeholder.png');
+    }
+    .img-62{
+    background-image: url('./theme-62/placeholder.png');
+    }
+    .img-63{
+    background-image: url('./theme-63/placeholder.png');
+    }
+    .img-64{
+    background-image: url('./theme-64/placeholder.png');
+    }
+    .img-65{
+    background-image: url('./theme-65/placeholder.png');
+    }
+    .img-66{
+    background-image: url('./theme-66/placeholder.png');
+    }
+    .img-67{
+    background-image: url('./theme-67/placeholder.png');
+    }
+    .img-68{
+    background-image: url('./theme-68/placeholder.png');
+    }
+    .img-69{
+    background-image: url('./theme-69/placeholder.png');
+    }
+    .img-70{
+    background-image: url('./theme-70/placeholder.png');
+    }
+    .img-71{
+    background-image: url('./theme-71/placeholder.png');
+    }
+    .img-72{
+    background-image: url('./theme-72/placeholder.png');
+    }
+    .img-73{
+    background-image: url('./theme-73/placeholder.png');
+    }
+    .img-74{
+    background-image: url('./theme-74/placeholder.png');
+    }
+    .img-75{
+    background-image: url('./theme-75/placeholder.png');
+    }
+    .img-76{
+    background-image: url('./theme-76/placeholder.png');
+    }
+    .img-77{
+    background-image: url('./theme-77/placeholder.png');
+    }
+    .img-78{
+    background-image: url('./theme-78/placeholder.png');
+    }
+    .img-79{
+    background-image: url('./theme-79/placeholder.png');
+    }
+    .img-80{
+    background-image: url('./theme-80/placeholder.png');
+    }
+    .img-81{
+    background-image: url('./theme-81/placeholder.png');
+    }
+    .img-82{
+    background-image: url('./theme-82/placeholder.png');
+    }
+    .img-83{
+    background-image: url('./theme-83/placeholder.png');
+    }
+    .img-84{
+    background-image: url('./theme-84/placeholder.png');
+    }
+    .img-85{
+    background-image: url('./theme-85/placeholder.png');
+    }
+    .img-86{
+    background-image: url('./theme-86/placeholder.png');
+    }
+    .img-87{
+    background-image: url('./theme-87/placeholder.png');
+    }
+    .img-88{
+    background-image: url('./theme-88/placeholder.png');
+    }
+    .img-89{
+    background-image: url('./theme-89/placeholder.png');
+    }
+    .img-90{
+    background-image: url('./theme-90/placeholder.png');
+    }
+    .img-91{
+    background-image: url('./theme-91/placeholder.png');
+    }
+    .img-92{
+    background-image: url('./theme-92/placeholder.png');
+    }
+    .img-93{
+    background-image: url('./theme-93/placeholder.png');
+    }
+    .img-94{
+    background-image: url('./theme-94/placeholder.png');
+    }
+    .img-95{
+    background-image: url('./theme-95/placeholder.png');
+    }
+    .img-96{
+    background-image: url('./theme-96/placeholder.png');
+    }
+    .img-97{
+    background-image: url('./theme-97/placeholder.png');
+    }
+    .img-98{
+    background-image: url('./theme-98/placeholder.png');
+    }
+    .img-99{
+    background-image: url('./theme-99/placeholder.png');
+    }
