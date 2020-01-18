@@ -9,13 +9,20 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <title>Coming soon</title>
 </head>
+<style>
+#overlay{            position: fixed;            height: 100%;            width: 100%;            background-color: black;            z-index: 200;            display: block;            background-image: url('./assets/loading.gif');            background-repeat: no-repeat;            background-position: center;            background-size: 10vw;        }
+#overlay-1{            position: fixed;            height: 100%;            width: 100%;            background-color: black;            z-index: 199;            display: block;        }
+#overlay-2{            position: fixed;            height: 100%;            width: 100%;            background-color: black;            z-index: 201;            display: block;        }
+</style>
 <body>
-
+    <div id="overlay"></div>
+    <div id="overlay-1"></div>
+    <div id="overlay-2"></div>   
 
  
 
     <i onclick="menu()" class="fas fa-filter" id="sort-btn"></i>
-
+    <a href=""><i class="fas fa-cloud-download-alt" id="buy-btn"></i></a>
     <div class="menu" id="menu">
            <a onclick="menu()" href="#basic">Basic</a>    
            <a onclick="menu()" href="#IT">IT</a>    
@@ -28,7 +35,7 @@
   
     </div>
     <div class="header" id="basic">
-        Basic, Logo multi purpose
+        Basic
     </div>
     <div class="section">
         <a href="./theme-41/index.html" target="__blank">
@@ -667,7 +674,15 @@
   </div>
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
 <script>
+$("#overlay-2").fadeOut(1000);
+$(window).on('load', function() {
+        $('#overlay').fadeOut(2000,function(){
+        $('#overlay-1').fadeOut(2000);
+    });    $('#overlay').fadeOut(3000);   
+   
+});
 function menu(){
     menuDiv = document.getElementById("menu");
     menuDiv.classList.toggle("show-menu");

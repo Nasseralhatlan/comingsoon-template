@@ -2,40 +2,68 @@ html,body{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgb(30, 30, 30);
+    background-color: rgb(20, 20, 20);
     margin: 0px;
     padding: 0px;
     scroll-behavior: smooth;  
     scrollbar-width: 0px;
     scrollbar-color: black;
+    background: linear-gradient(90deg, rgb(20, 20, 20) 0%, rgb(34, 34, 34) 50%, rgb(20, 20, 20) 100%);
 }
 
+html{
+    background-color: black;
+}
 ::-webkit-scrollbar {
     display: none;
 }
 
 #sort-btn{
     position: fixed;
-    font-size: 30px;
     color: white;
     right: 3%;
     margin-top: 50px;
     margin-bottom: 50px;
     z-index: 10;
-    color: white;
+    color: rgb(0, 0, 0);
     transition: 0.3s;
     cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 25px;
 }
 
 #sort-btn:hover{
-    color: rgb(100 , 100, 100);
+    background-color: rgb(60, 60, 60);
 }
+
+#buy-btn{
+    position: fixed;
+    color: white;
+    right: 8%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    z-index: 10;
+    color: rgb(0, 0, 0);
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 25px;
+}
+
+#buy-btn:hover{
+    background-color: rgb(60, 60, 60);
+}
+
 
 .menu{
     position: fixed;
     width: 250px;
     right: 3%;
-    margin-top: 100px;
+    margin-top: 120px;
     height: fit-content;
     background-color: rgb(255, 255, 255);
     z-index: 10;
@@ -120,9 +148,187 @@ html,body{
 
 
 .section .wrapper:hover{
-    /* -webkit-box-shadow: 0px 10px 97px -25px rgba(0,0,0,0.7);
-    -moz-box-shadow: 0px 10px 97px -25px rgba(0,0,0,0.7); */
+    -webkit-box-shadow: 0px 30px 40px -25px rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: 0px 30px 40px -25px rgba(0, 0, 0, 0.9);
     box-shadow: 0px 30px 40px -25px rgba(0, 0, 0, 0.9);
+}
+
+/* phones */
+@media (min-width: 375px) and (max-width: 767px) {
+
+    #sort-btn{
+        position: fixed;
+        color: white;
+        right: 3%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        z-index: 10;
+        color: rgb(0, 0, 0);
+        transition: 0.3s;
+        cursor: pointer;
+        background-color: white;
+        border-radius: 50%;
+        padding: 15px;
+        font-size: 20px;
+    }
+    #sort-btn:hover{
+        background-color: white;
+    }
+
+    #buy-btn{
+        position: fixed;
+        color: white;
+        right: 20%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        z-index: 10;
+        color: rgb(0, 0, 0);
+        transition: 0.3s;
+        cursor: pointer;
+        background-color: white;
+        border-radius: 50%;
+        padding: 15px;
+        font-size: 20px;
+    }
+    #buy-btn:hover{
+        background-color: white;
+    }
+
+    .menu{
+        width: 200px;
+        margin-top: 150px;
+    }
+    .menu a{
+        display: inline-block;
+        width: 85%;
+        margin-left: 7.5%;
+        float: left;
+        color: black;
+        font-size: 15px;
+        line-height: 35px;
+        margin-top: 10px;
+        text-decoration: none;
+        outline: none;
+        font-family: 'Quicksand', sans-serif;
+        text-align: center;
+        border-radius: 3px;
+        transition: 0.2s;
+    }
+
+    .header{
+        position: relative;
+        width: 95%;
+        margin-left: 3%;
+        margin-right: 2%;
+        margin-top: 20px;
+        padding-top: 30px;
+        margin-bottom: 0px;
+        font-size: 30px;
+        font-family: 'Quicksand', sans-serif;
+        color: rgb(255, 255, 255);
+    }
+    
+    
+    .section{
+        position: relative;
+        display: inline-block;
+        height: fit-content;
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    
+    }
+    
+    .section a{
+        position: relative;
+        display: inline-block;
+        float: left;
+        width: fit-content;
+        height: fit-content;
+    }
+    
+    .section .wrapper{
+        position: relative;
+        width: 95vw;
+        margin-left:2.5vw ;
+        margin-right: 2.5vw;
+        margin-bottom: 40px;
+        height: 52vw;
+        border-radius: 5px;
+        float: left;
+        transition: 0.3s;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+
+}
+
+
+/* tablates */
+@media (min-width: 768px) and (max-width: 1030px) {
+
+    #sort-btn{
+        position: fixed;
+        color: white;
+        right: 3%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        z-index: 10;
+        color: rgb(0, 0, 0);
+        transition: 0.3s;
+        cursor: pointer;
+        background-color: white;
+        border-radius: 50%;
+        padding: 15px;
+        font-size: 30px;
+    }
+    #sort-btn:hover{
+        background-color: white;
+    }
+
+    #buy-btn{
+        position: fixed;
+        color: white;
+        right: 10%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        z-index: 10;
+        color: rgb(0, 0, 0);
+        transition: 0.3s;
+        cursor: pointer;
+        background-color: white;
+        border-radius: 50%;
+        padding: 15px;
+        font-size: 30px;
+    }
+    #buy-btn:hover{
+        background-color: white;
+    }
+    
+    .menu{
+        width: 350px;
+        margin-top: 150px;
+    }
+    .menu a{
+        display: inline-block;
+        width: 85%;
+        margin-left: 7.5%;
+        float: left;
+        color: black;
+        font-size: 30px;
+        line-height: 55px;
+        margin-top: 30px;
+        text-decoration: none;
+        outline: none;
+        font-family: 'Quicksand', sans-serif;
+        text-align: center;
+        border-radius: 3px;
+        transition: 0.2s;
+    }
+
 }
 
 
