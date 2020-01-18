@@ -152,13 +152,9 @@
        }
 
 
-       #overlay{
-            position: fixed;
-            height: 100%;
-            width: 100%;
-            background-color: black;
-            z-index: 200;
-        }
+       #overlay{            position: fixed;            height: 100%;            width: 100%;            background-color: black;            z-index: 200;            display: block;            background-image: url('../assets/loading.gif');            background-repeat: no-repeat;            background-position: center;            background-size: 10vw;        }
+        #overlay-1{            position: fixed;            height: 100%;            width: 100%;            background-color: black;            z-index: 199;            display: block;        }
+        #overlay-2{            position: fixed;            height: 100%;            width: 100%;            background-color: black;            z-index: 201;            display: block;        }
 
 
         .menu{
@@ -673,8 +669,9 @@
 </head>
 <body>
 
-    <div class="overlay" id="overlay">
-   
+    <div id="overlay"></div>
+    <div id="overlay-1"></div>
+    <div id="overlay-2"></div>   
     </div>
 
 
@@ -840,8 +837,11 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
 <script>
+$("#overlay-2").fadeOut(1000);
 $(window).on('load', function() {
-    $('#overlay').fadeOut(3000);   
+        $('#overlay').fadeOut(2000,function(){
+        $('#overlay-1').fadeOut(2000);
+    });    $('#overlay').fadeOut(3000);   
     counterEndDate = {
      year : 2021,
      month : 4,

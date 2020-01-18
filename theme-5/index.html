@@ -75,7 +75,7 @@
            margin-right: 2.5%;
            margin-left: 2.5%;
            height: 65%;
-           margin-top: 2.5%;
+           margin-top: 14%; /* EDITED BY AUTOMATION CODE */ 
            margin-bottom: 2.5%;
            float: left;
            font-size: 80px;
@@ -146,13 +146,9 @@
        }
 
 
-       #overlay{
-            position: fixed;
-            height: 100%;
-            width: 100%;
-            background-color: black;
-            z-index: 200;
-        }
+       #overlay{            position: fixed;            height: 100%;            width: 100%;            background-color: black;            z-index: 200;            display: block;            background-image: url('../assets/loading.gif');            background-repeat: no-repeat;            background-position: center;            background-size: 10vw;        }
+        #overlay-1{            position: fixed;            height: 100%;            width: 100%;            background-color: black;            z-index: 199;            display: block;        }
+        #overlay-2{            position: fixed;            height: 100%;            width: 100%;            background-color: black;            z-index: 201;            display: block;        }
 
 
         .menu{
@@ -309,9 +305,10 @@
            width: 95%;
            margin-right: 2.5%;
            margin-left: 2.5%;
+           margin-top: 2.5%;
            height: 80%;
            float: left;
-           font-size: 40px;
+           margin-top: 2.5%; }/* EDITED BY AUTOMATION CODE */ 
        }
 
 
@@ -507,7 +504,7 @@
            margin-left: 2.5%;
            height: 70%;
            float: left;
-           font-size: 60px;
+           margin-top: 2.5%; }/* EDITED BY AUTOMATION CODE */ 
        }
 
 
@@ -667,8 +664,9 @@
 </head>
 <body>
 
-    <div class="overlay" id="overlay">
-   
+    <div id="overlay"></div>
+    <div id="overlay-1"></div>
+    <div id="overlay-2"></div>   
     </div>
 
 
@@ -799,8 +797,11 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
 <script>
+$("#overlay-2").fadeOut(1000);
 $(window).on('load', function() {
-    $('#overlay').fadeOut(3000);   
+        $('#overlay').fadeOut(2000,function(){
+        $('#overlay-1').fadeOut(2000);
+    });    $('#overlay').fadeOut(3000);   
    
 });
 

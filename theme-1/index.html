@@ -17,7 +17,7 @@
         color: rgb(255, 238, 238);
         margin: 0px;
         padding: 0px;
-        font-family: 'Quicksand', sans-serif;     
+        font-family: 'Quicksand', sans-serif;
        }
 
        a{
@@ -58,7 +58,7 @@
          color: #d10f6a;
        }
 
-       
+
        .main{
            position: fixed;
            width: 40%;
@@ -75,7 +75,7 @@
            margin-right: 2.5%;
            margin-left: 2.5%;
            height: 65%;
-           margin-top: 2.5%;
+           margin-top: 14%; /* EDITED BY AUTOMATION CODE */ 
            margin-bottom: 2.5%;
            float: left;
            font-size: 80px;
@@ -146,13 +146,9 @@
        }
 
 
-       #overlay{
-            position: fixed;
-            height: 100%;
-            width: 100%;
-            background-color: black;
-            z-index: 200;
-        }
+       #overlay{            position: fixed;            height: 100%;            width: 100%;            background-color: black;            z-index: 200;            display: block;            background-image: url('../assets/loading.gif');            background-repeat: no-repeat;            background-position: center;            background-size: 10vw;        }
+        #overlay-1{            position: fixed;            height: 100%;            width: 100%;            background-color: black;            z-index: 199;            display: block;        }
+        #overlay-2{            position: fixed;            height: 100%;            width: 100%;            background-color: black;            z-index: 201;            display: block;        }
 
 
         .menu{
@@ -168,7 +164,7 @@
             display: none;
         }
 
-    
+
 
         .close-btn{
             color: black;
@@ -186,8 +182,8 @@
          margin-bottom: 2.5%;
          /* background-color: rgb(48, 48, 48); */
          float: left;
-         display: inline-block; 
-        } 
+         display: inline-block;
+        }
 
 
         .card label{
@@ -253,7 +249,7 @@
             font-size: 25px;
         }
 
-        
+
         .card .picture .overlay:hover {
             opacity: 1;
         }
@@ -268,7 +264,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            
+
         }
 
 
@@ -312,7 +308,7 @@
            height: 80%;
            float: left;
            font-size: 40px;
-       }
+           margin-top: 2.5%; }/* EDITED BY AUTOMATION CODE */ 
 
 
        .main .bottom{
@@ -376,8 +372,8 @@
          margin-bottom: 2.5%;
          /* background-color: rgb(48, 48, 48); */
          float: left;
-         display: inline-block; 
-        } 
+         display: inline-block;
+        }
 
         .card label{
             position: relative;
@@ -460,7 +456,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            
+
         }
 
 
@@ -508,7 +504,7 @@
            height: 70%;
            float: left;
            font-size: 60px;
-       }
+           margin-top: 2.5%; }/* EDITED BY AUTOMATION CODE */ 
 
 
        .main .bottom{
@@ -526,7 +522,7 @@
            font-size: 45px;
        }
 
-       
+
        .menu{
             position: fixed;
             top: 0px;
@@ -553,8 +549,8 @@
          margin-bottom: 2.5%;
          /* background-color: rgb(48, 48, 48); */
          float: left;
-         display: inline-block; 
-        } 
+         display: inline-block;
+        }
 
         .card label{
             position: relative;
@@ -606,7 +602,7 @@
             height: 100%;
             object-fit: cover;
         }
-        
+
         .card .picture .overlay{
             position: absolute;
             width: 100%;
@@ -654,7 +650,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            
+
         }
 
        }
@@ -662,21 +658,22 @@
 
 
 
-        
+
     </style>
 </head>
 <body>
 
-    <div class="overlay" id="overlay">
-   
+    <div id="overlay"></div>
+    <div id="overlay-1"></div>
+    <div id="overlay-2"></div>
     </div>
 
 
 
-    <div class="img"> 
+    <div class="img">
     </div>
 
-    
+
     <div class="main">
         <div class="top">
              <label>Name</label>  <br>is a great idea being built , wait for us
@@ -685,10 +682,9 @@
               <span class="span-3">.</span>
         </div>
        <div class="bottom">
-
        </div>
     </div>
-     
+
     <div id="menu" class="menu">
 
 
@@ -706,7 +702,7 @@
                 <div class="overlay"> Hello </div>
                  <img src="../assets/ex-1.jpg" alt="" srcset="">
             </div>
-    
+
             <div class="picture">
              <div class="overlay"> Label </div>
              <img src="../assets/ex-2.jpg" alt="" srcset="">
@@ -715,9 +711,9 @@
 
 
 
-   
 
-       
+
+
 
 
         <div class="card row">
@@ -729,11 +725,11 @@
                 <a href="" class="row">
                     <i class="fab fa-twitter"></i>
                   </a>
-                  
+
                   <a href="" class="row">
-                    <i class="fab fa-instagram"></i>     
+                    <i class="fab fa-instagram"></i>
                    </a>
-            
+
 
                   <a href="" class="row">
                     <i class="fab fa-facebook-f"></i>
@@ -741,21 +737,21 @@
 
 
                 <a href="" class="row">
-                    <i class="fab fa-whatsapp"></i>        
+                    <i class="fab fa-whatsapp"></i>
                 </a>
 
 
-            
+
                   <a href="" class="row">
-                    <i class="fas fa-envelope"></i>      
+                    <i class="fas fa-envelope"></i>
                 </a>
 
 
                 <a href="tel:123-456-7890" class="row">
-                    <i class="fas fa-phone-alt"></i>      
+                    <i class="fas fa-phone-alt"></i>
                 </a>
 
-                
+
             </p>
        </div>
 
@@ -799,9 +795,12 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
 <script>
+$("#overlay-2").fadeOut(1000);
 $(window).on('load', function() {
-    $('#overlay').fadeOut(3000);   
-   
+        $('#overlay').fadeOut(2000,function(){
+        $('#overlay-1').fadeOut(2000);
+    });    $('#overlay').fadeOut(3000);
+
 });
 
 
@@ -815,8 +814,8 @@ menu = () =>{
 
     if(!classes.contains("close-btn")){
         $(".menu").fadeIn();
-        classes.add('close-btn');   
-    }else{        
+        classes.add('close-btn');
+    }else{
         $(".menu").fadeOut();
         classes.remove('close-btn');
     }
