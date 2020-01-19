@@ -263,6 +263,9 @@ html{
     }
 
 
+    #overlay{                      
+        background-size: 60vw !important;        
+    }
 
 }
 
@@ -327,6 +330,10 @@ html{
         text-align: center;
         border-radius: 3px;
         transition: 0.2s;
+    }
+
+    #overlay{                      
+        background-size: 40vw !important;        
     }
 
 }
@@ -997,3 +1004,5 @@ html{
     .img-200{
     background-image: url('./theme-200/placeholder.png');
     }
+
+
