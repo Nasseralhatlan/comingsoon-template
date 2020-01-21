@@ -1,24 +1,162 @@
-html,body{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(20, 20, 20);
-    margin: 0px;
-    padding: 0px;
-    scroll-behavior: smooth;  
-    scrollbar-width: 0px;
-    scrollbar-color: black;
-    background: linear-gradient(90deg, rgb(20, 20, 20) 0%, rgb(34, 34, 34) 50%, rgb(20, 20, 20) 100%);
+html,
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(20, 20, 20);
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+  scrollbar-width: 0px;
+  scrollbar-color: black;
+  background: linear-gradient(
+    90deg,
+    rgb(20, 20, 20) 0%,
+    rgb(34, 34, 34) 50%,
+    rgb(20, 20, 20) 100%
+  );
 }
 
-html{
-    background-color: black;
+html {
+  background-color: black;
 }
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
-#sort-btn{
+#sort-btn {
+  position: fixed;
+  color: white;
+  right: 3%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  z-index: 10;
+  color: rgb(0, 0, 0);
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 25px;
+}
+
+#sort-btn:hover {
+  background-color: rgb(60, 60, 60);
+}
+
+#buy-btn {
+  position: fixed;
+  color: white;
+  right: 8%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  z-index: 10;
+  color: rgb(0, 0, 0);
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 25px;
+}
+
+#buy-btn:hover {
+  background-color: rgb(60, 60, 60);
+}
+
+.menu {
+  position: fixed;
+  width: 250px;
+  right: 3%;
+  margin-top: 120px;
+  height: fit-content;
+  background-color: rgb(255, 255, 255);
+  z-index: 10;
+  border-radius: 5px;
+  padding-bottom: 20px;
+  display: none;
+}
+
+.show-menu {
+  display: inline-block;
+}
+
+.menu a {
+  display: inline-block;
+  width: 85%;
+  margin-left: 7.5%;
+  float: left;
+  color: black;
+  font-size: 20px;
+  line-height: 50px;
+  margin-top: 20px;
+  text-decoration: none;
+  outline: none;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  border-radius: 3px;
+  transition: 0.2s;
+}
+
+.menu a:hover {
+  color: white;
+  background-color: rgb(20, 20, 20);
+}
+
+.header {
+  position: relative;
+  width: 95%;
+  margin-left: 3%;
+  margin-right: 2%;
+  margin-top: 20px;
+  padding-top: 30px;
+  margin-bottom: 50px;
+  font-size: 30px;
+  font-family: "Quicksand", sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+.section {
+  position: relative;
+  display: inline-block;
+  height: fit-content;
+  width: 100%;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.section a {
+  position: relative;
+  display: inline-block;
+  float: left;
+  width: fit-content;
+  height: fit-content;
+}
+
+.section .wrapper {
+  position: relative;
+  width: 45vw;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+  margin-bottom: 100px;
+  height: 25vw;
+  border-radius: 5px;
+  float: left;
+  transition: 0.3s;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section .wrapper:hover {
+  -webkit-box-shadow: 0px 30px 40px -25px rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: 0px 30px 40px -25px rgba(0, 0, 0, 0.9);
+  box-shadow: 0px 30px 40px -25px rgba(0, 0, 0, 0.9);
+}
+
+/* phones */
+@media (min-width: 375px) and (max-width: 767px) {
+  #sort-btn {
     position: fixed;
     color: white;
     right: 3%;
@@ -31,17 +169,16 @@ html{
     background-color: white;
     border-radius: 50%;
     padding: 15px;
-    font-size: 25px;
-}
+    font-size: 20px;
+  }
+  #sort-btn:hover {
+    background-color: white;
+  }
 
-#sort-btn:hover{
-    background-color: rgb(60, 60, 60);
-}
-
-#buy-btn{
+  #buy-btn {
     position: fixed;
     color: white;
-    right: 8%;
+    right: 20%;
     margin-top: 50px;
     margin-bottom: 50px;
     z-index: 10;
@@ -51,958 +188,788 @@ html{
     background-color: white;
     border-radius: 50%;
     padding: 15px;
-    font-size: 25px;
-}
+    font-size: 20px;
+  }
+  #buy-btn:hover {
+    background-color: white;
+  }
 
-#buy-btn:hover{
-    background-color: rgb(60, 60, 60);
-}
-
-
-.menu{
-    position: fixed;
-    width: 250px;
-    right: 3%;
-    margin-top: 120px;
-    height: fit-content;
-    background-color: rgb(255, 255, 255);
-    z-index: 10;
-    border-radius: 5px;
-    padding-bottom: 20px;
-    display: none;
-}
-
-.show-menu{
-    display: inline-block;
-}
-
-.menu a{
+  .menu {
+    width: 200px;
+    margin-top: 150px;
+  }
+  .menu a {
     display: inline-block;
     width: 85%;
     margin-left: 7.5%;
     float: left;
     color: black;
-    font-size: 20px;
-    line-height: 50px;
-    margin-top: 20px;
+    font-size: 15px;
+    line-height: 35px;
+    margin-top: 10px;
     text-decoration: none;
     outline: none;
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
     text-align: center;
     border-radius: 3px;
     transition: 0.2s;
-}
+  }
 
-.menu a:hover{
-    color: white;
-    background-color: rgb(20, 20, 20);
-}
-
-
-.header{
+  .header {
     position: relative;
     width: 95%;
     margin-left: 3%;
     margin-right: 2%;
     margin-top: 20px;
     padding-top: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     font-size: 30px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
     color: rgb(255, 255, 255);
-}
+  }
 
-
-.section{
+  .section {
     position: relative;
     display: inline-block;
     height: fit-content;
     width: 100%;
-    margin-top: 70px;
+    margin-top: 30px;
     margin-bottom: 50px;
+  }
 
-}
-
-.section a{
+  .section a {
     position: relative;
     display: inline-block;
     float: left;
     width: fit-content;
     height: fit-content;
-}
+  }
 
-.section .wrapper{
+  .section .wrapper {
     position: relative;
-    width: 45vw;
-    margin-left:2.5vw ;
+    width: 95vw;
+    margin-left: 2.5vw;
     margin-right: 2.5vw;
-    margin-bottom: 100px;
-    height: 25vw;
+    margin-bottom: 40px;
+    height: 52vw;
     border-radius: 5px;
     float: left;
     transition: 0.3s;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  #overlay {
+    background-size: 60vw !important;
+  }
 }
-
-
-.section .wrapper:hover{
-    -webkit-box-shadow: 0px 30px 40px -25px rgba(0, 0, 0, 0.9);
-    -moz-box-shadow: 0px 30px 40px -25px rgba(0, 0, 0, 0.9);
-    box-shadow: 0px 30px 40px -25px rgba(0, 0, 0, 0.9);
-}
-
-/* phones */
-@media (min-width: 375px) and (max-width: 767px) {
-
-    #sort-btn{
-        position: fixed;
-        color: white;
-        right: 3%;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        z-index: 10;
-        color: rgb(0, 0, 0);
-        transition: 0.3s;
-        cursor: pointer;
-        background-color: white;
-        border-radius: 50%;
-        padding: 15px;
-        font-size: 20px;
-    }
-    #sort-btn:hover{
-        background-color: white;
-    }
-
-    #buy-btn{
-        position: fixed;
-        color: white;
-        right: 20%;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        z-index: 10;
-        color: rgb(0, 0, 0);
-        transition: 0.3s;
-        cursor: pointer;
-        background-color: white;
-        border-radius: 50%;
-        padding: 15px;
-        font-size: 20px;
-    }
-    #buy-btn:hover{
-        background-color: white;
-    }
-
-    .menu{
-        width: 200px;
-        margin-top: 150px;
-    }
-    .menu a{
-        display: inline-block;
-        width: 85%;
-        margin-left: 7.5%;
-        float: left;
-        color: black;
-        font-size: 15px;
-        line-height: 35px;
-        margin-top: 10px;
-        text-decoration: none;
-        outline: none;
-        font-family: 'Quicksand', sans-serif;
-        text-align: center;
-        border-radius: 3px;
-        transition: 0.2s;
-    }
-
-    .header{
-        position: relative;
-        width: 95%;
-        margin-left: 3%;
-        margin-right: 2%;
-        margin-top: 20px;
-        padding-top: 30px;
-        margin-bottom: 0px;
-        font-size: 30px;
-        font-family: 'Quicksand', sans-serif;
-        color: rgb(255, 255, 255);
-    }
-    
-    
-    .section{
-        position: relative;
-        display: inline-block;
-        height: fit-content;
-        width: 100%;
-        margin-top: 30px;
-        margin-bottom: 50px;
-    
-    }
-    
-    .section a{
-        position: relative;
-        display: inline-block;
-        float: left;
-        width: fit-content;
-        height: fit-content;
-    }
-    
-    .section .wrapper{
-        position: relative;
-        width: 95vw;
-        margin-left:2.5vw ;
-        margin-right: 2.5vw;
-        margin-bottom: 40px;
-        height: 52vw;
-        border-radius: 5px;
-        float: left;
-        transition: 0.3s;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-
-    #overlay{                      
-        background-size: 60vw !important;        
-    }
-
-}
-
 
 /* tablates */
 @media (min-width: 768px) and (max-width: 1030px) {
+  #sort-btn {
+    position: fixed;
+    color: white;
+    right: 3%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    z-index: 10;
+    color: rgb(0, 0, 0);
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 30px;
+  }
+  #sort-btn:hover {
+    background-color: white;
+  }
 
-    #sort-btn{
-        position: fixed;
-        color: white;
-        right: 3%;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        z-index: 10;
-        color: rgb(0, 0, 0);
-        transition: 0.3s;
-        cursor: pointer;
-        background-color: white;
-        border-radius: 50%;
-        padding: 15px;
-        font-size: 30px;
-    }
-    #sort-btn:hover{
-        background-color: white;
-    }
+  #buy-btn {
+    position: fixed;
+    color: white;
+    right: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    z-index: 10;
+    color: rgb(0, 0, 0);
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 30px;
+  }
+  #buy-btn:hover {
+    background-color: white;
+  }
 
-    #buy-btn{
-        position: fixed;
-        color: white;
-        right: 10%;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        z-index: 10;
-        color: rgb(0, 0, 0);
-        transition: 0.3s;
-        cursor: pointer;
-        background-color: white;
-        border-radius: 50%;
-        padding: 15px;
-        font-size: 30px;
-    }
-    #buy-btn:hover{
-        background-color: white;
-    }
-    
-    .menu{
-        width: 350px;
-        margin-top: 150px;
-    }
-    .menu a{
-        display: inline-block;
-        width: 85%;
-        margin-left: 7.5%;
-        float: left;
-        color: black;
-        font-size: 30px;
-        line-height: 55px;
-        margin-top: 30px;
-        text-decoration: none;
-        outline: none;
-        font-family: 'Quicksand', sans-serif;
-        text-align: center;
-        border-radius: 3px;
-        transition: 0.2s;
-    }
+  .menu {
+    width: 350px;
+    margin-top: 150px;
+  }
+  .menu a {
+    display: inline-block;
+    width: 85%;
+    margin-left: 7.5%;
+    float: left;
+    color: black;
+    font-size: 30px;
+    line-height: 55px;
+    margin-top: 30px;
+    text-decoration: none;
+    outline: none;
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+    border-radius: 3px;
+    transition: 0.2s;
+  }
 
-    #overlay{                      
-        background-size: 40vw !important;        
-    }
-
+  #overlay {
+    background-size: 40vw !important;
+  }
 }
 
-
-.img-1{
-    background-image: url('./theme-1/placeholder.png');
+.img-1 {
+  background-image: url("./theme-1/placeholder.png");
 }
 
-.img-2{
-    background-image: url('./theme-2/placeholder.png');
+.img-2 {
+  background-image: url("./theme-2/placeholder.png");
 }
 
-.img-3{
-    background-image: url('./theme-3/placeholder.png');
+.img-3 {
+  background-image: url("./theme-3/placeholder.png");
 }
 
-.img-4{
-    background-image: url('./theme-4/placeholder.png');
+.img-4 {
+  background-image: url("./theme-4/placeholder.png");
 }
 
-.img-5{
-    background-image: url('./theme-5/placeholder.png');
+.img-5 {
+  background-image: url("./theme-5/placeholder.png");
 }
 
-.img-6{
-    background-image: url('./theme-6/placeholder.png');
+.img-6 {
+  background-image: url("./theme-6/placeholder.png");
 }
 
-.img-7{
-    background-image: url('./theme-7/placeholder.png');
+.img-7 {
+  background-image: url("./theme-7/placeholder.png");
 }
 
-.img-8{
-    background-image: url('./theme-8/placeholder.png');
+.img-8 {
+  background-image: url("./theme-8/placeholder.png");
 }
 
-
-.img-9{
-    background-image: url('./theme-9/placeholder.png');
+.img-9 {
+  background-image: url("./theme-9/placeholder.png");
 }
 
-.img-10{
-    background-image: url('./theme-10/placeholder.png');
+.img-10 {
+  background-image: url("./theme-10/placeholder.png");
 }
 
-.img-11{
-    background-image: url('./theme-11/placeholder.png');
+.img-11 {
+  background-image: url("./theme-11/placeholder.png");
 }
 
-.img-12{
-    background-image: url('./theme-12/placeholder.png');
+.img-12 {
+  background-image: url("./theme-12/placeholder.png");
 }
 
-.img-13{
-    background-image: url('./theme-13/placeholder.png');
+.img-13 {
+  background-image: url("./theme-13/placeholder.png");
 }
 
-.img-14{
-    background-image: url('./theme-14/placeholder.png');
+.img-14 {
+  background-image: url("./theme-14/placeholder.png");
 }
 
-.img-15{
-    background-image: url('./theme-15/placeholder.png');
+.img-15 {
+  background-image: url("./theme-15/placeholder.png");
 }
 
-.img-16{
-    background-image: url('./theme-16/placeholder.png');
+.img-16 {
+  background-image: url("./theme-16/placeholder.png");
 }
 
-.img-17{
-    background-image: url('./theme-17/placeholder.png');
+.img-17 {
+  background-image: url("./theme-17/placeholder.png");
 }
 
-.img-18{
-    background-image: url('./theme-18/placeholder.png');
+.img-18 {
+  background-image: url("./theme-18/placeholder.png");
 }
 
-.img-19{
-    background-image: url('./theme-19/placeholder.png');
+.img-19 {
+  background-image: url("./theme-19/placeholder.png");
 }
 
-.img-20{
-    background-image: url('./theme-20/placeholder.png');
+.img-20 {
+  background-image: url("./theme-20/placeholder.png");
 }
 
-
-.img-21{
-    background-image: url('./theme-21/placeholder.png');
+.img-21 {
+  background-image: url("./theme-21/placeholder.png");
 }
 
-
-.img-22{
-    background-image: url('./theme-22/placeholder.png');
+.img-22 {
+  background-image: url("./theme-22/placeholder.png");
 }
 
-
-.img-23{
-    background-image: url('./theme-23/placeholder.png');
+.img-23 {
+  background-image: url("./theme-23/placeholder.png");
 }
 
-
-.img-24{
-    background-image: url('./theme-24/placeholder.png');
+.img-24 {
+  background-image: url("./theme-24/placeholder.png");
 }
 
-
-.img-25{
-    background-image: url('./theme-25/placeholder.png');
+.img-25 {
+  background-image: url("./theme-25/placeholder.png");
 }
 
-
-.img-26{
-    background-image: url('./theme-26/placeholder.png');
+.img-26 {
+  background-image: url("./theme-26/placeholder.png");
 }
 
-
-.img-27{
-    background-image: url('./theme-27/placeholder.png');
+.img-27 {
+  background-image: url("./theme-27/placeholder.png");
 }
 
-
-.img-28{
-    background-image: url('./theme-28/placeholder.png');
+.img-28 {
+  background-image: url("./theme-28/placeholder.png");
 }
 
-
-.img-29{
-    background-image: url('./theme-29/placeholder.png');
+.img-29 {
+  background-image: url("./theme-29/placeholder.png");
 }
 
-
-.img-30{
-    background-image: url('./theme-30/placeholder.png');
+.img-30 {
+  background-image: url("./theme-30/placeholder.png");
 }
 
-
-
-.img-31{
-    background-image: url('./theme-31/placeholder.png');
+.img-31 {
+  background-image: url("./theme-31/placeholder.png");
 }
 
-
-.img-32{
-    background-image: url('./theme-32/placeholder.png');
+.img-32 {
+  background-image: url("./theme-32/placeholder.png");
 }
 
-
-.img-33{
-    background-image: url('./theme-33/placeholder.png');
+.img-33 {
+  background-image: url("./theme-33/placeholder.png");
 }
 
-
-.img-34{
-    background-image: url('./theme-34/placeholder.png');
+.img-34 {
+  background-image: url("./theme-34/placeholder.png");
 }
 
-
-.img-35{
-    background-image: url('./theme-35/placeholder.png');
+.img-35 {
+  background-image: url("./theme-35/placeholder.png");
 }
 
-
-.img-36{
-    background-image: url('./theme-36/placeholder.png');
+.img-36 {
+  background-image: url("./theme-36/placeholder.png");
 }
 
-
-.img-37{
-    background-image: url('./theme-37/placeholder.png');
+.img-37 {
+  background-image: url("./theme-37/placeholder.png");
 }
 
-
-.img-38{
-    background-image: url('./theme-38/placeholder.png');
+.img-38 {
+  background-image: url("./theme-38/placeholder.png");
 }
 
-
-.img-39{
-    background-image: url('./theme-39/placeholder.png');
+.img-39 {
+  background-image: url("./theme-39/placeholder.png");
 }
 
-
-.img-40{
-    background-image: url('./theme-40/placeholder.png');
+.img-40 {
+  background-image: url("./theme-40/placeholder.png");
 }
 
-.img-41{
-    background-image: url('./theme-41/placeholder.png');
-
+.img-41 {
+  background-image: url("./theme-41/placeholder.png");
 }
 
-.img-42{
-    background-image: url('./theme-42/placeholder.png');
+.img-42 {
+  background-image: url("./theme-42/placeholder.png");
 }
 
-.img-43{
-    background-image: url('./theme-43/placeholder.png');
-    }
-    .img-44{
-    background-image: url('./theme-44/placeholder.png');
-    }
-    .img-45{
-    background-image: url('./theme-45/placeholder.png');
-    }
-    .img-46{
-    background-image: url('./theme-46/placeholder.png');
-    }
-    .img-47{
-    background-image: url('./theme-47/placeholder.png');
-    }
-    .img-48{
-    background-image: url('./theme-48/placeholder.png');
-    }
-    .img-49{
-    background-image: url('./theme-49/placeholder.png');
-    }
-    .img-50{
-    background-image: url('./theme-50/placeholder.png');
-    }
-    .img-51{
-    background-image: url('./theme-51/placeholder.png');
-    }
-    .img-52{
-    background-image: url('./theme-52/placeholder.png');
-    }
-    .img-53{
-    background-image: url('./theme-53/placeholder.png');
-    }
-    .img-54{
-    background-image: url('./theme-54/placeholder.png');
-    }
-    .img-55{
-    background-image: url('./theme-55/placeholder.png');
-    }
-    .img-56{
-    background-image: url('./theme-56/placeholder.png');
-    }
-    .img-57{
-    background-image: url('./theme-57/placeholder.png');
-    }
-    .img-58{
-    background-image: url('./theme-58/placeholder.png');
-    }
-    .img-59{
-    background-image: url('./theme-59/placeholder.png');
-    }
-    .img-60{
-    background-image: url('./theme-60/placeholder.png');
-    }
-    .img-61{
-    background-image: url('./theme-61/placeholder.png');
-    }
-    .img-62{
-    background-image: url('./theme-62/placeholder.png');
-    }
-    .img-63{
-    background-image: url('./theme-63/placeholder.png');
-    }
-    .img-64{
-    background-image: url('./theme-64/placeholder.png');
-    }
-    .img-65{
-    background-image: url('./theme-65/placeholder.png');
-    }
-    .img-66{
-    background-image: url('./theme-66/placeholder.png');
-    }
-    .img-67{
-    background-image: url('./theme-67/placeholder.png');
-    }
-    .img-68{
-    background-image: url('./theme-68/placeholder.png');
-    }
-    .img-69{
-    background-image: url('./theme-69/placeholder.png');
-    }
-    .img-70{
-    background-image: url('./theme-70/placeholder.png');
-    }
-    .img-71{
-    background-image: url('./theme-71/placeholder.png');
-    }
-    .img-72{
-    background-image: url('./theme-72/placeholder.png');
-    }
-    .img-73{
-    background-image: url('./theme-73/placeholder.png');
-    }
-    .img-74{
-    background-image: url('./theme-74/placeholder.png');
-    }
-    .img-75{
-    background-image: url('./theme-75/placeholder.png');
-    }
-    .img-76{
-    background-image: url('./theme-76/placeholder.png');
-    }
-    .img-77{
-    background-image: url('./theme-77/placeholder.png');
-    }
-    .img-78{
-    background-image: url('./theme-78/placeholder.png');
-    }
-    .img-79{
-    background-image: url('./theme-79/placeholder.png');
-    }
-    .img-80{
-    background-image: url('./theme-80/placeholder.png');
-    }
-    .img-81{
-    background-image: url('./theme-81/placeholder.png');
-    }
-    .img-82{
-    background-image: url('./theme-82/placeholder.png');
-    }
-    .img-83{
-    background-image: url('./theme-83/placeholder.png');
-    }
-    .img-84{
-    background-image: url('./theme-84/placeholder.png');
-    }
-    .img-85{
-    background-image: url('./theme-85/placeholder.png');
-    }
-    .img-86{
-    background-image: url('./theme-86/placeholder.png');
-    }
-    .img-87{
-    background-image: url('./theme-87/placeholder.png');
-    }
-    .img-88{
-    background-image: url('./theme-88/placeholder.png');
-    }
-    .img-89{
-    background-image: url('./theme-89/placeholder.png');
-    }
-    .img-90{
-    background-image: url('./theme-90/placeholder.png');
-    }
-    .img-91{
-    background-image: url('./theme-91/placeholder.png');
-    }
-    .img-92{
-    background-image: url('./theme-92/placeholder.png');
-    }
-    .img-93{
-    background-image: url('./theme-93/placeholder.png');
-    }
-    .img-94{
-    background-image: url('./theme-94/placeholder.png');
-    }
-    .img-95{
-    background-image: url('./theme-95/placeholder.png');
-    }
-    .img-96{
-    background-image: url('./theme-96/placeholder.png');
-    }
-    .img-97{
-    background-image: url('./theme-97/placeholder.png');
-    }
-    .img-98{
-    background-image: url('./theme-98/placeholder.png');
-    }
-    .img-99{
-    background-image: url('./theme-99/placeholder.png');
-    }
-    .img-100{
-    background-image: url('./theme-100/placeholder.png');
-    }
-    .img-101{
-    background-image: url('./theme-101/placeholder.png');
-    }
-    .img-102{
-    background-image: url('./theme-102/placeholder.png');
-    }
-    .img-103{
-    background-image: url('./theme-103/placeholder.png');
-    }
-    .img-104{
-    background-image: url('./theme-104/placeholder.png');
-    }
-    .img-105{
-    background-image: url('./theme-105/placeholder.png');
-    }
-    .img-106{
-    background-image: url('./theme-106/placeholder.png');
-    }
-    .img-107{
-    background-image: url('./theme-107/placeholder.png');
-    }
-    .img-108{
-    background-image: url('./theme-108/placeholder.png');
-    }
-    .img-109{
-    background-image: url('./theme-109/placeholder.png');
-    }
-    .img-110{
-    background-image: url('./theme-110/placeholder.png');
-    }
-    .img-111{
-    background-image: url('./theme-111/placeholder.png');
-    }
-    .img-112{
-    background-image: url('./theme-112/placeholder.png');
-    }
-    .img-113{
-    background-image: url('./theme-113/placeholder.png');
-    }
-    .img-114{
-    background-image: url('./theme-114/placeholder.png');
-    }
-    .img-115{
-    background-image: url('./theme-115/placeholder.png');
-    }
-    .img-116{
-    background-image: url('./theme-116/placeholder.png');
-    }
-    .img-117{
-    background-image: url('./theme-117/placeholder.png');
-    }
-    .img-118{
-    background-image: url('./theme-118/placeholder.png');
-    }
-    .img-119{
-    background-image: url('./theme-119/placeholder.png');
-    }
-    .img-120{
-    background-image: url('./theme-120/placeholder.png');
-    }
-    .img-121{
-    background-image: url('./theme-121/placeholder.png');
-    }
-    .img-122{
-    background-image: url('./theme-122/placeholder.png');
-    }
-    .img-123{
-    background-image: url('./theme-123/placeholder.png');
-    }
-    .img-124{
-    background-image: url('./theme-124/placeholder.png');
-    }
-    .img-125{
-    background-image: url('./theme-125/placeholder.png');
-    }
-    .img-126{
-    background-image: url('./theme-126/placeholder.png');
-    }
-    .img-127{
-    background-image: url('./theme-127/placeholder.png');
-    }
-    .img-128{
-    background-image: url('./theme-128/placeholder.png');
-    }
-    .img-129{
-    background-image: url('./theme-129/placeholder.png');
-    }
-    .img-130{
-    background-image: url('./theme-130/placeholder.png');
-    }
-    .img-131{
-    background-image: url('./theme-131/placeholder.png');
-    }
-    .img-132{
-    background-image: url('./theme-132/placeholder.png');
-    }
-    .img-133{
-    background-image: url('./theme-133/placeholder.png');
-    }
-    .img-134{
-    background-image: url('./theme-134/placeholder.png');
-    }
-    .img-135{
-    background-image: url('./theme-135/placeholder.png');
-    }
-    .img-136{
-    background-image: url('./theme-136/placeholder.png');
-    }
-    .img-137{
-    background-image: url('./theme-137/placeholder.png');
-    }
-    .img-138{
-    background-image: url('./theme-138/placeholder.png');
-    }
-    .img-139{
-    background-image: url('./theme-139/placeholder.png');
-    }
-    .img-140{
-    background-image: url('./theme-140/placeholder.png');
-    }
-    .img-141{
-    background-image: url('./theme-141/placeholder.png');
-    }
-    .img-142{
-    background-image: url('./theme-142/placeholder.png');
-    }
-    .img-143{
-    background-image: url('./theme-143/placeholder.png');
-    }
-    .img-144{
-    background-image: url('./theme-144/placeholder.png');
-    }
-    .img-145{
-    background-image: url('./theme-145/placeholder.png');
-    }
-    .img-146{
-    background-image: url('./theme-146/placeholder.png');
-    }
-    .img-147{
-    background-image: url('./theme-147/placeholder.png');
-    }
-    .img-148{
-    background-image: url('./theme-148/placeholder.png');
-    }
-    .img-149{
-    background-image: url('./theme-149/placeholder.png');
-    }
-    .img-150{
-    background-image: url('./theme-150/placeholder.png');
-    }
-    .img-151{
-    background-image: url('./theme-151/placeholder.png');
-    }
-    .img-152{
-    background-image: url('./theme-152/placeholder.png');
-    }
-    .img-153{
-    background-image: url('./theme-153/placeholder.png');
-    }
-    .img-154{
-    background-image: url('./theme-154/placeholder.png');
-    }
-    .img-155{
-    background-image: url('./theme-155/placeholder.png');
-    }
-    .img-156{
-    background-image: url('./theme-156/placeholder.png');
-    }
-    .img-157{
-    background-image: url('./theme-157/placeholder.png');
-    }
-    .img-158{
-    background-image: url('./theme-158/placeholder.png');
-    }
-    .img-159{
-    background-image: url('./theme-159/placeholder.png');
-    }
-    .img-160{
-    background-image: url('./theme-160/placeholder.png');
-    }
-    .img-161{
-    background-image: url('./theme-161/placeholder.png');
-    }
-    .img-162{
-    background-image: url('./theme-162/placeholder.png');
-    }
-    .img-163{
-    background-image: url('./theme-163/placeholder.png');
-    }
-    .img-164{
-    background-image: url('./theme-164/placeholder.png');
-    }
-    .img-165{
-    background-image: url('./theme-165/placeholder.png');
-    }
-    .img-166{
-    background-image: url('./theme-166/placeholder.png');
-    }
-    .img-167{
-    background-image: url('./theme-167/placeholder.png');
-    }
-    .img-168{
-    background-image: url('./theme-168/placeholder.png');
-    }
-    .img-169{
-    background-image: url('./theme-169/placeholder.png');
-    }
-    .img-170{
-    background-image: url('./theme-170/placeholder.png');
-    }
-    .img-171{
-    background-image: url('./theme-171/placeholder.png');
-    }
-    .img-172{
-    background-image: url('./theme-172/placeholder.png');
-    }
-    .img-173{
-    background-image: url('./theme-173/placeholder.png');
-    }
-    .img-174{
-    background-image: url('./theme-174/placeholder.png');
-    }
-    .img-175{
-    background-image: url('./theme-175/placeholder.png');
-    }
-    .img-176{
-    background-image: url('./theme-176/placeholder.png');
-    }
-    .img-177{
-    background-image: url('./theme-177/placeholder.png');
-    }
-    .img-178{
-    background-image: url('./theme-178/placeholder.png');
-    }
-    .img-179{
-    background-image: url('./theme-179/placeholder.png');
-    }
-    .img-180{
-    background-image: url('./theme-180/placeholder.png');
-    }
-    .img-181{
-    background-image: url('./theme-181/placeholder.png');
-    }
-    .img-182{
-    background-image: url('./theme-182/placeholder.png');
-    }
-    .img-183{
-    background-image: url('./theme-183/placeholder.png');
-    }
-    .img-184{
-    background-image: url('./theme-184/placeholder.png');
-    }
-    .img-185{
-    background-image: url('./theme-185/placeholder.png');
-    }
-    .img-186{
-    background-image: url('./theme-186/placeholder.png');
-    }
-    .img-187{
-    background-image: url('./theme-187/placeholder.png');
-    }
-    .img-188{
-    background-image: url('./theme-188/placeholder.png');
-    }
-    .img-189{
-    background-image: url('./theme-189/placeholder.png');
-    }
-    .img-190{
-    background-image: url('./theme-190/placeholder.png');
-    }
-    .img-191{
-    background-image: url('./theme-191/placeholder.png');
-    }
-    .img-192{
-    background-image: url('./theme-192/placeholder.png');
-    }
-    .img-193{
-    background-image: url('./theme-193/placeholder.png');
-    }
-    .img-194{
-    background-image: url('./theme-194/placeholder.png');
-    }
-    .img-195{
-    background-image: url('./theme-195/placeholder.png');
-    }
-    .img-196{
-    background-image: url('./theme-196/placeholder.png');
-    }
-    .img-197{
-    background-image: url('./theme-197/placeholder.png');
-    }
-    .img-198{
-    background-image: url('./theme-198/placeholder.png');
-    }
-    .img-199{
-    background-image: url('./theme-199/placeholder.png');
-    }
-    .img-200{
-    background-image: url('./theme-200/placeholder.png');
-    }
-
-
+.img-43 {
+  background-image: url("./theme-43/placeholder.png");
+}
+.img-44 {
+  background-image: url("./theme-44/placeholder.png");
+}
+.img-45 {
+  background-image: url("./theme-45/placeholder.png");
+}
+.img-46 {
+  background-image: url("./theme-46/placeholder.png");
+}
+.img-47 {
+  background-image: url("./theme-47/placeholder.png");
+}
+.img-48 {
+  background-image: url("./theme-48/placeholder.png");
+}
+.img-49 {
+  background-image: url("./theme-49/placeholder.png");
+}
+.img-50 {
+  background-image: url("./theme-50/placeholder.png");
+}
+.img-51 {
+  background-image: url("./theme-51/placeholder.png");
+}
+.img-52 {
+  background-image: url("./theme-52/placeholder.png");
+}
+.img-53 {
+  background-image: url("./theme-53/placeholder.png");
+}
+.img-54 {
+  background-image: url("./theme-54/placeholder.png");
+}
+.img-55 {
+  background-image: url("./theme-55/placeholder.png");
+}
+.img-56 {
+  background-image: url("./theme-56/placeholder.png");
+}
+.img-57 {
+  background-image: url("./theme-57/placeholder.png");
+}
+.img-58 {
+  background-image: url("./theme-58/placeholder.png");
+}
+.img-59 {
+  background-image: url("./theme-59/placeholder.png");
+}
+.img-60 {
+  background-image: url("./theme-60/placeholder.png");
+}
+.img-61 {
+  background-image: url("./theme-61/placeholder.png");
+}
+.img-62 {
+  background-image: url("./theme-62/placeholder.png");
+}
+.img-63 {
+  background-image: url("./theme-63/placeholder.png");
+}
+.img-64 {
+  background-image: url("./theme-64/placeholder.png");
+}
+.img-65 {
+  background-image: url("./theme-65/placeholder.png");
+}
+.img-66 {
+  background-image: url("./theme-66/placeholder.png");
+}
+.img-67 {
+  background-image: url("./theme-67/placeholder.png");
+}
+.img-68 {
+  background-image: url("./theme-68/placeholder.png");
+}
+.img-69 {
+  background-image: url("./theme-69/placeholder.png");
+}
+.img-70 {
+  background-image: url("./theme-70/placeholder.png");
+}
+.img-71 {
+  background-image: url("./theme-71/placeholder.png");
+}
+.img-72 {
+  background-image: url("./theme-72/placeholder.png");
+}
+.img-73 {
+  background-image: url("./theme-73/placeholder.png");
+}
+.img-74 {
+  background-image: url("./theme-74/placeholder.png");
+}
+.img-75 {
+  background-image: url("./theme-75/placeholder.png");
+}
+.img-76 {
+  background-image: url("./theme-76/placeholder.png");
+}
+.img-77 {
+  background-image: url("./theme-77/placeholder.png");
+}
+.img-78 {
+  background-image: url("./theme-78/placeholder.png");
+}
+.img-79 {
+  background-image: url("./theme-79/placeholder.png");
+}
+.img-80 {
+  background-image: url("./theme-80/placeholder.png");
+}
+.img-81 {
+  background-image: url("./theme-81/placeholder.png");
+}
+.img-82 {
+  background-image: url("./theme-82/placeholder.png");
+}
+.img-83 {
+  background-image: url("./theme-83/placeholder.png");
+}
+.img-84 {
+  background-image: url("./theme-84/placeholder.png");
+}
+.img-85 {
+  background-image: url("./theme-85/placeholder.png");
+}
+.img-86 {
+  background-image: url("./theme-86/placeholder.png");
+}
+.img-87 {
+  background-image: url("./theme-87/placeholder.png");
+}
+.img-88 {
+  background-image: url("./theme-88/placeholder.png");
+}
+.img-89 {
+  background-image: url("./theme-89/placeholder.png");
+}
+.img-90 {
+  background-image: url("./theme-90/placeholder.png");
+}
+.img-91 {
+  background-image: url("./theme-91/placeholder.png");
+}
+.img-92 {
+  background-image: url("./theme-92/placeholder.png");
+}
+.img-93 {
+  background-image: url("./theme-93/placeholder.png");
+}
+.img-94 {
+  background-image: url("./theme-94/placeholder.png");
+}
+.img-95 {
+  background-image: url("./theme-95/placeholder.png");
+}
+.img-96 {
+  background-image: url("./theme-96/placeholder.png");
+}
+.img-97 {
+  background-image: url("./theme-97/placeholder.png");
+}
+.img-98 {
+  background-image: url("./theme-98/placeholder.png");
+}
+.img-99 {
+  background-image: url("./theme-99/placeholder.png");
+}
+.img-100 {
+  background-image: url("./theme-100/placeholder.png");
+}
+.img-101 {
+  background-image: url("./theme-101/placeholder.png");
+}
+.img-102 {
+  background-image: url("./theme-102/placeholder.png");
+}
+.img-103 {
+  background-image: url("./theme-103/placeholder.png");
+}
+.img-104 {
+  background-image: url("./theme-104/placeholder.png");
+}
+.img-105 {
+  background-image: url("./theme-105/placeholder.png");
+}
+.img-106 {
+  background-image: url("./theme-106/placeholder.png");
+}
+.img-107 {
+  background-image: url("./theme-107/placeholder.png");
+}
+.img-108 {
+  background-image: url("./theme-108/placeholder.png");
+}
+.img-109 {
+  background-image: url("./theme-109/placeholder.png");
+}
+.img-110 {
+  background-image: url("./theme-110/placeholder.png");
+}
+.img-111 {
+  background-image: url("./theme-111/placeholder.png");
+}
+.img-112 {
+  background-image: url("./theme-112/placeholder.png");
+}
+.img-113 {
+  background-image: url("./theme-113/placeholder.png");
+}
+.img-114 {
+  background-image: url("./theme-114/placeholder.png");
+}
+.img-115 {
+  background-image: url("./theme-115/placeholder.png");
+}
+.img-116 {
+  background-image: url("./theme-116/placeholder.png");
+}
+.img-117 {
+  background-image: url("./theme-117/placeholder.png");
+}
+.img-118 {
+  background-image: url("./theme-118/placeholder.png");
+}
+.img-119 {
+  background-image: url("./theme-119/placeholder.png");
+}
+.img-120 {
+  background-image: url("./theme-120/placeholder.png");
+}
+.img-121 {
+  background-image: url("./theme-121/placeholder.png");
+}
+.img-122 {
+  background-image: url("./theme-122/placeholder.png");
+}
+.img-123 {
+  background-image: url("./theme-123/placeholder.png");
+}
+.img-124 {
+  background-image: url("./theme-124/placeholder.png");
+}
+.img-125 {
+  background-image: url("./theme-125/placeholder.png");
+}
+.img-126 {
+  background-image: url("./theme-126/placeholder.png");
+}
+.img-127 {
+  background-image: url("./theme-127/placeholder.png");
+}
+.img-128 {
+  background-image: url("./theme-128/placeholder.png");
+}
+.img-129 {
+  background-image: url("./theme-129/placeholder.png");
+}
+.img-130 {
+  background-image: url("./theme-130/placeholder.png");
+}
+.img-131 {
+  background-image: url("./theme-131/placeholder.png");
+}
+.img-132 {
+  background-image: url("./theme-132/placeholder.png");
+}
+.img-133 {
+  background-image: url("./theme-133/placeholder.png");
+}
+.img-134 {
+  background-image: url("./theme-134/placeholder.png");
+}
+.img-135 {
+  background-image: url("./theme-135/placeholder.png");
+}
+.img-136 {
+  background-image: url("./theme-136/placeholder.png");
+}
+.img-137 {
+  background-image: url("./theme-137/placeholder.png");
+}
+.img-138 {
+  background-image: url("./theme-138/placeholder.png");
+}
+.img-139 {
+  background-image: url("./theme-139/placeholder.png");
+}
+.img-140 {
+  background-image: url("./theme-140/placeholder.png");
+}
+.img-141 {
+  background-image: url("./theme-141/placeholder.png");
+}
+.img-142 {
+  background-image: url("./theme-142/placeholder.png");
+}
+.img-143 {
+  background-image: url("./theme-143/placeholder.png");
+}
+.img-144 {
+  background-image: url("./theme-144/placeholder.png");
+}
+.img-145 {
+  background-image: url("./theme-145/placeholder.png");
+}
+.img-146 {
+  background-image: url("./theme-146/placeholder.png");
+}
+.img-147 {
+  background-image: url("./theme-147/placeholder.png");
+}
+.img-148 {
+  background-image: url("./theme-148/placeholder.png");
+}
+.img-149 {
+  background-image: url("./theme-149/placeholder.png");
+}
+.img-150 {
+  background-image: url("./theme-150/placeholder.png");
+}
+.img-151 {
+  background-image: url("./theme-151/placeholder.png");
+}
+.img-152 {
+  background-image: url("./theme-152/placeholder.png");
+}
+.img-153 {
+  background-image: url("./theme-153/placeholder.png");
+}
+.img-154 {
+  background-image: url("./theme-154/placeholder.png");
+}
+.img-155 {
+  background-image: url("./theme-155/placeholder.png");
+}
+.img-156 {
+  background-image: url("./theme-156/placeholder.png");
+}
+.img-157 {
+  background-image: url("./theme-157/placeholder.png");
+}
+.img-158 {
+  background-image: url("./theme-158/placeholder.png");
+}
+.img-159 {
+  background-image: url("./theme-159/placeholder.png");
+}
+.img-160 {
+  background-image: url("./theme-160/placeholder.png");
+}
+.img-161 {
+  background-image: url("./theme-161/placeholder.png");
+}
+.img-162 {
+  background-image: url("./theme-162/placeholder.png");
+}
+.img-163 {
+  background-image: url("./theme-163/placeholder.png");
+}
+.img-164 {
+  background-image: url("./theme-164/placeholder.png");
+}
+.img-165 {
+  background-image: url("./theme-165/placeholder.png");
+}
+.img-166 {
+  background-image: url("./theme-166/placeholder.png");
+}
+.img-167 {
+  background-image: url("./theme-167/placeholder.png");
+}
+.img-168 {
+  background-image: url("./theme-168/placeholder.png");
+}
+.img-169 {
+  background-image: url("./theme-169/placeholder.png");
+}
+.img-170 {
+  background-image: url("./theme-170/placeholder.png");
+}
+.img-171 {
+  background-image: url("./theme-171/placeholder.png");
+}
+.img-172 {
+  background-image: url("./theme-172/placeholder.png");
+}
+.img-173 {
+  background-image: url("./theme-173/placeholder.png");
+}
+.img-174 {
+  background-image: url("./theme-174/placeholder.png");
+}
+.img-175 {
+  background-image: url("./theme-175/placeholder.png");
+}
+.img-176 {
+  background-image: url("./theme-176/placeholder.png");
+}
+.img-177 {
+  background-image: url("./theme-177/placeholder.png");
+}
+.img-178 {
+  background-image: url("./theme-178/placeholder.png");
+}
+.img-179 {
+  background-image: url("./theme-179/placeholder.png");
+}
+.img-180 {
+  background-image: url("./theme-180/placeholder.png");
+}
+.img-181 {
+  background-image: url("./theme-181/placeholder.png");
+}
+.img-182 {
+  background-image: url("./theme-182/placeholder.png");
+}
+.img-183 {
+  background-image: url("./theme-183/placeholder.png");
+}
+.img-184 {
+  background-image: url("./theme-184/placeholder.png");
+}
+.img-185 {
+  background-image: url("./theme-185/placeholder.png");
+}
+.img-186 {
+  background-image: url("./theme-186/placeholder.png");
+}
+.img-187 {
+  background-image: url("./theme-187/placeholder.png");
+}
+.img-188 {
+  background-image: url("./theme-188/placeholder.png");
+}
+.img-189 {
+  background-image: url("./theme-189/placeholder.png");
+}
+.img-190 {
+  background-image: url("./theme-190/placeholder.png");
+}
+.img-191 {
+  background-image: url("./theme-191/placeholder.png");
+}
+.img-192 {
+  background-image: url("./theme-192/placeholder.png");
+}
+.img-193 {
+  background-image: url("./theme-193/placeholder.png");
+}
+.img-194 {
+  background-image: url("./theme-194/placeholder.png");
+}
+.img-195 {
+  background-image: url("./theme-195/placeholder.png");
+}
+.img-196 {
+  background-image: url("./theme-196/placeholder.png");
+}
+.img-197 {
+  background-image: url("./theme-197/placeholder.png");
+}
+.img-198 {
+  background-image: url("./theme-198/placeholder.png");
+}
+.img-199 {
+  background-image: url("./theme-199/placeholder.png");
+}
+.img-200 {
+  background-image: url("./theme-200/placeholder.png");
+}

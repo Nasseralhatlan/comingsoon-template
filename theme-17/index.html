@@ -8,185 +8,178 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Coming sson</title>
     <style>
-
-        body,html{
-        position: absolute;
-        width: 100%;
-        height:100%;
-        background-color:rgb(0, 0, 0);
-        color: rgb(255, 238, 238);
-        margin: 0px;
-        padding: 0px;
-        font-family: 'Quicksand', sans-serif;        
-       }
-
-       a{
-           outline: none;
-           text-decoration: none;
-           color: black;
-       }
-
-       .img{
-           position: fixed;
-           width: 50%;
-           height: 100%;
-           margin: 0px;
-           padding: 0px;
-           left: 50%;
-           top: 0px;
-           background-image: url('bg.png');
-           background-position: center;
-           background-repeat: no-repeat;
-           background-size: contain;
-       }
-
-
-      .menu-btn{
-           position: absolute;
-           font-size: 30px;
-           top: 60px;
-           right: 60px;
-           cursor: pointer;
-           transition: 0.3s;
-           z-index: 10;
-           color: white;
-
-       }
-
-
-       .menu-btn:hover{
-        color: #797979;
-       }
-
-       
-       .main{
-           position: fixed;
-           width: 40%;
-           padding: 5%;
-           height: 90%;
-           margin: 0px;
-           left: 0px;
-           top: 0px;
-       }
-
-       .main .top{
-           position: relative;
-           width: 95%;
-           margin-right: 2.5%;
-           margin-left: 2.5%;
-           height: 65%;
-           margin-top: 14%; /* EDITED BY AUTOMATION CODE */ 
-           margin-bottom: 2.5%;
-           float: left;
-           font-size: 80px;
-       }
-
-       .main .top label{
-          background: -webkit-linear-gradient(#797979,#ffffff);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-       }
-
-        .main span{
-        animation: dots 2s ease-in-out infinite;
+        body,
+        html {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 238, 238);
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Quicksand', sans-serif;
         }
-        .main .span-1{
-        animation-delay: 0s;
+        a {
+            outline: none;
+            text-decoration: none;
+            color: black;
         }
-        .main .span-2{
-         animation-delay: 0.4s;
+        .img {
+            position: fixed;
+            width: 50%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            left: 50%;
+            top: 0px;
+            background-image: url('bg.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
         }
-        .main .span-3{
-         animation-delay: 0.8s;
+        .menu-btn {
+            position: absolute;
+            font-size: 30px;
+            top: 60px;
+            right: 60px;
+            cursor: pointer;
+            transition: 0.3s;
+            z-index: 10;
+            color: white;
         }
-
-        @keyframes dots{
-            50%{
+        .menu-btn:hover {
+            color: var(--main-color);
+        }
+        .main {
+            position: fixed;
+            width: 40%;
+            padding: 5%;
+            height: 90%;
+            margin: 0px;
+            left: 0px;
+            top: 0px;
+        }
+        .main .top {
+            position: relative;
+            width: 95%;
+            margin-right: 2.5%;
+            margin-left: 2.5%;
+            height: 65%;
+            margin-top: 14%;
+            margin-bottom: 2.5%;
+            float: left;
+            font-size: 80px;
+        }
+        .main .top label {
+            background: -webkit-linear-gradient(var(--name-gradient-start-color),var(--name-gradient-end-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .main span {
+            animation: dots 2s ease-in-out infinite;
+        }
+        .main .span-1 {
+            animation-delay: 0s;
+        }
+        .main .span-2 {
+            animation-delay: 0.4s;
+        }
+        .main .span-3 {
+            animation-delay: 0.8s;
+        }
+        @keyframes dots {
+            50% {
                 opacity: 0;
             }
         }
-
-
-
-       .main .bottom{
-           position: relative;
-           width: 95%;
-           margin-right: 2.5%;
-           margin-left: 2.5%;
-           height: 15%;
-           margin-top: 7.5%;
-           margin-bottom: 7.5%;
-           float: left;
-           display: flex;
-           flex-direction: row;
-           justify-content: space-around;
-           font-size: 35px;
-       }
-
-       .main .bottom .row .value{
-           width: 60px;
-         text-align: center;
-         opacity: 1;
-         animation: loadingNumbers 2s ease-in-out 1.5s  normal;
-       }
-
-       @keyframes loadingNumbers {
-            50%{
+        .main .bottom {
+            position: relative;
+            width: 95%;
+            margin-right: 2.5%;
+            margin-left: 2.5%;
+            height: 15%;
+            margin-top: 7.5%;
+            margin-bottom: 7.5%;
+            float: left;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            font-size: 35px;
+        }
+        .main .bottom .row .value {
+            width: 60px;
+            text-align: center;
+            opacity: 1;
+            animation: loadingNumbers 2s ease-in-out 1.5s normal;
+        }
+        @keyframes loadingNumbers {
+            50% {
                 opacity: 0;
             }
-
-       }
-
-
-       .main .bottom .row .label{
-         color: rgb(129, 129, 129);
-         width: 60px;
-         font-size: 20px ;
-         text-align: center;
-       }
-
-
-        #overlay{position: fixed; height: 100%; width: 100%; background-color: black; z-index: 200; display: block; background-image: url('../assets/loading.gif'); background-repeat: no-repeat;  background-position: center; background-size: 15vw;      }
-        #overlay-1{            position: fixed;            height: 100%;            width: 100%;            background-color: black;            z-index: 199;            display: block;        }
-        #overlay-2{            position: fixed;            height: 100%;            width: 100%;            background-color: black;            z-index: 201;            display: block;        }
-
-
-        .menu{
+        }
+        .main .bottom .row .label {
+            color: rgb(129, 129, 129);
+            width: 60px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #overlay {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            z-index: 200;
+            display: block;
+            background-image: url('../assets/loading.gif');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 15vw;
+        }
+        #overlay-1 {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            z-index: 199;
+            display: block;
+        }
+        #overlay-2 {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            z-index: 201;
+            display: block;
+        }
+        .menu {
             position: absolute;
             top: 0px;
             width: 100%;
             height: 100%;
-            margin:0px;
+            margin: 0px;
             padding-top: 6%;
             padding-bottom: 2%;
             background-color: rgba(255, 255, 255);
             overflow: scroll;
             display: none;
         }
-
-    
-
-        .close-btn{
+        .close-btn {
             color: black;
             transform: rotate(180deg);
         }
-
-       .card{
-         position: relative;
-         margin:0px;
-         width: 42%;
-         margin-left: 4%;
-         margin-right: 4%;
-         height: 40%;
-         margin-top: 2.5%;
-         margin-bottom: 2.5%;
-         /* background-color: rgb(48, 48, 48); */
-         float: left;
-         display: inline-block; 
-        } 
-
-
-        .card label{
+        .card {
+            position: relative;
+            margin: 0px;
+            width: 42%;
+            margin-left: 4%;
+            margin-right: 4%;
+            height: 40%;
+            margin-top: 2.5%;
+            margin-bottom: 2.5%;
+            float: left;
+            display: inline-block;
+        }
+        .card label {
             position: relative;
             width: 100%;
             float: left;
@@ -195,7 +188,7 @@
             font-size: 40px;
             color: rgb(0, 0, 0);
         }
-        .card p{
+        .card p {
             position: relative;
             width: 100%;
             float: left;
@@ -204,8 +197,7 @@
             font-size: 25px;
             color: rgb(36, 36, 36);
         }
-
-        .card p a{
+        .card p a {
             font-size: 30px;
             height: 80px;
             width: 15%;
@@ -217,26 +209,23 @@
             border-radius: 4px;
             transition: 0.3s;
         }
-
-        .card p a:hover{
-            color: #797979;
+        .card p a:hover {
+            color: var(--main-color);
         }
-        .card .picture{
+        .card .picture {
             position: relative;
             width: 48%;
             height: 94%;
             margin-bottom: 3%;
             background-color: rgb(0, 0, 0);
         }
-
-        .card .picture img{
+        .card .picture img {
             position: relative;
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
-        .card .picture .overlay{
+        .card .picture .overlay {
             position: absolute;
             width: 100%;
             height: 100%;
@@ -244,585 +233,474 @@
             opacity: 0;
             line-height: 300px;
             text-align: center;
-            background-color: rgb(0, 0, 0,0.8);
+            background-color: rgb(0, 0, 0, 0.8);
             transition: 0.3s;
             font-size: 25px;
         }
-
-        
         .card .picture .overlay:hover {
             opacity: 1;
         }
-
-        .column{
+        .column {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
         }
-
-        .row{
+        .row {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            
         }
-
-
-        /* phones */
-       @media (min-width: 375px) and (max-width: 767px) { #overlay{ background-size: 60vw !important; }        .img{
-            position: fixed;
-           width: 100%;
-           height: 100%;
-           margin: 0px;
-           padding: 0px;
-           left: 0%;
-           top: 0px;
-           background-color: rgb(0, 0, 0);
-           background-image: url('bg.png');
-           background-position: center;
-           background-repeat: no-repeat;
-           background-size: contain;
-       }
-
-
-       .main{
-           position: fixed;
-           width: 90%;
-           padding:0px;
-           padding-top: 5%;
-           padding-left: 5%;
-           padding-right: 5%;
-           height: 95%;
-           margin: 0px;
-           left: 0px;
-           top: 0%;
-           z-index: 10;
-       }
-
-       .main .top{
-           position: relative;
-           width: 95%;
-           margin-right: 2.5%;
-           margin-left: 2.5%;
-           height: 80%;
-           float: left;
-           font-size: 40px;
-           margin-top: 2.5%; }/* EDITED BY AUTOMATION CODE */ 
-
-
-       .main .bottom{
-           position: relative;
-           width: 98%;
-           margin-right: 1%;
-           margin-left: 1%;
-           height: 10%;
-           margin-top: 5%;
-           margin-bottom: 0%;
-           float: left;
-           display: flex;
-           flex-direction: row;
-           justify-content: space-between;
-           font-size: 25px;
-       }
-
-       .menu-btn{
-           position: fixed;
-           font-size: 25px;
-           top: 35px;
-           right: 20px;
-           cursor: pointer;
-           transition: 0.3s;
-           z-index: 110;
-           color: #797979;
-
-       }
-
-
-
-       .close-btn{
-            color: #797979;
-            transform: rotate(180deg);
+        @media (min-width: 375px) and (max-width: 767px) {
+            #overlay {
+                background-size: 60vw !important;
+            }
+            .img {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+                padding: 0px;
+                left: 0%;
+                top: 0px;
+                background-color: rgb(0, 0, 0);
+            background-image: url('bg.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .main {
+                position: fixed;
+                width: 90%;
+                padding: 0px;
+                padding-top: 5%;
+                padding-left: 5%;
+                padding-right: 5%;
+                height: 95%;
+                margin: 0px;
+                left: 0px;
+                top: 0%;
+                z-index: 10;
+            }
+            .main .top {
+                position: relative;
+                width: 95%;
+                margin-right: 2.5%;
+                margin-left: 2.5%;
+                height: 80%;
+                float: left;
+                font-size: 40px;
+                margin-top: 2.5%;
+            }
+            .main .bottom {
+                position: relative;
+                width: 98%;
+                margin-right: 1%;
+                margin-left: 1%;
+                height: 10%;
+                margin-top: 5%;
+                margin-bottom: 0%;
+                float: left;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                font-size: 25px;
+            }
+            .menu-btn {
+                position: fixed;
+                font-size: 25px;
+                top: 35px;
+                right: 20px;
+                cursor: pointer;
+                transition: 0.3s;
+                z-index: 110;
+            color: var(--main-color);
+            }
+            .close-btn {
+            color: var(--main-color);
+                transform: rotate(180deg);
+            }
+            .menu {
+                position: fixed;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+                padding: 0px;
+                background-color: rgba(255, 255, 255);
+                overflow-y: scroll;
+                z-index: 100;
+                display: none;
+            }
+            .card {
+                position: relative;
+                margin: 0px;
+                width: 90%;
+                margin-left: 5%;
+                margin-right: 5%;
+                height: auto;
+                margin-top: 2.5%;
+                margin-bottom: 2.5%;
+                float: left;
+                display: inline-block;
+            }
+            .card label {
+                position: relative;
+                width: 100%;
+                float: left;
+                height: 25%;
+                margin-top: 5%;
+                font-size: 35px;
+                color: rgb(0, 0, 0);
+            }
+            .card p {
+                position: relative;
+                width: 100%;
+                float: left;
+                height: 60%;
+                margin-top: 5%;
+                font-size: 20px;
+                color: rgb(36, 36, 36);
+            }
+            .card p a {
+                font-size: 20px;
+                height: 50px;
+                width: 15%;
+                text-align: center;
+                display: flex;
+                justify-content: space-around;
+                background-color: black;
+                color: white;
+                border-radius: 4px;
+                transition: 0.3s;
+            }
+            .card .picture {
+                position: relative;
+                float: left;
+                width: 48%;
+                height: 200px;
+                margin-bottom: 3%;
+                background-color: rgb(0, 0, 0);
+            }
+            .card .picture img {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .card .picture .overlay {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 10;
+                opacity: 0;
+                line-height: 200px;
+                text-align: center;
+                background-color: rgb(0, 0, 0, 0.8);
+                transition: 0.3s;
+                font-size: 20px;
+            }
+            .mapouter {
+                position: relative;
+                text-align: right;
+                height: 700px !important;
+                width: 100%;
+            }
+            .column {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .row {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
         }
-
-
-        .menu{
-            position: fixed;
-            top: 0px;
-            width: 100%;
-            height: 100%;
-            margin:0px;
-            padding: 0px;
-            background-color: rgba(255, 255, 255);
-            overflow-y: scroll;
-            z-index: 100;
-            display: none;
-
+        @media (min-width: 768px) and (max-width: 1030px) {
+            #overlay {
+                background-size: 40vw !important;
+            }
+            .img {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+                padding: 0px;
+                left: 0%;
+                top: 0px;
+                background-color: rgb(0, 0, 0);
+            background-image: url('bg.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .main {
+                position: fixed;
+                width: 90%;
+                padding: 0px;
+                padding-top: 5%;
+                padding-left: 5%;
+                padding-right: 5%;
+                height: 95%;
+                margin: 0px;
+                left: 0px;
+                top: 0%;
+                z-index: 10;
+            }
+            .main .top {
+                position: relative;
+                width: 95%;
+                margin-right: 2.5%;
+                margin-left: 2.5%;
+                height: 70%;
+                float: left;
+                font-size: 60px;
+                margin-top: 2.5%;
+            }
+            .main .bottom {
+                position: relative;
+                width: 95%;
+                margin-right: 2.5%;
+                margin-left: 2.5%;
+                height: 10%;
+                margin-top: 10%;
+                margin-bottom: 10%;
+                float: left;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                font-size: 45px;
+            }
+            .menu {
+                position: fixed;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+                padding: 0px;
+                background-color: rgba(255, 255, 255);
+                overflow-y: scroll;
+                z-index: 100;
+                display: none;
+            }
+            .card {
+                position: relative;
+                margin: 0px;
+                width: 90%;
+                margin-left: 5%;
+                margin-right: 5%;
+                height: auto;
+                margin-top: 2.5%;
+                margin-bottom: 2.5%;
+                float: left;
+                display: inline-block;
+            }
+            .card label {
+                position: relative;
+                width: 100%;
+                float: left;
+                height: 25%;
+                margin-top: 5%;
+                font-size: 60px;
+                color: rgb(0, 0, 0);
+            }
+            .card p {
+                position: relative;
+                width: 100%;
+                float: left;
+                height: 60%;
+                margin-top: 5%;
+                font-size: 35px;
+                color: rgb(36, 36, 36);
+            }
+            .card p a {
+                font-size: 30px;
+                height: 130px;
+                width: 15%;
+                text-align: center;
+                display: flex;
+                justify-content: space-around;
+                background-color: black;
+                color: white;
+                border-radius: 4px;
+                transition: 0.3s;
+            }
+            .card .picture {
+                position: relative;
+                float: left;
+                width: 48%;
+                height: 500px;
+                margin-bottom: 3%;
+                background-color: rgb(0, 0, 0);
+            }
+            .card .picture img {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .card .picture .overlay {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 10;
+                opacity: 0;
+                line-height: 500px;
+                text-align: center;
+                background-color: rgb(0, 0, 0, 0.8);
+                transition: 0.3s;
+                font-size: 25px;
+            }
+            .mapouter {
+                position: relative;
+                text-align: right;
+                height: 900px !important;
+                width: 100%;
+            }
+            .menu-btn {
+                position: fixed;
+                font-size: 35px;
+                top: 80px;
+                right: 50px;
+                cursor: pointer;
+                transition: 0.3s;
+                z-index: 110;
+            color: var(--main-color);
+            }
+            .close-btn {
+            color: var(--main-color);
+                transform: rotate(180deg);
+            }
+            .column {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .row {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
         }
-
-
-       .card{
-         position: relative;
-         margin:0px;
-         width: 90%;
-         margin-left: 5%;
-         margin-right: 5%;
-         height: auto;
-         margin-top: 2.5%;
-         margin-bottom: 2.5%;
-         /* background-color: rgb(48, 48, 48); */
-         float: left;
-         display: inline-block; 
-        } 
-
-        .card label{
-            position: relative;
-            width: 100%;
-            float: left;
-            height: 25%;
-            margin-top: 5%;
-            font-size: 35px;
-            color: rgb(0, 0, 0);
-        }
-
-        .card p{
-            position: relative;
-            width: 100%;
-            float: left;
-            height: 60%;
-            margin-top: 5%;
-            font-size: 20px;
-            color: rgb(36, 36, 36);
-        }
-
-        .card p a{
-            font-size: 20px;
-            height: 50px;
-            width: 15%;
-            text-align: center;
-            display: flex;
-            justify-content: space-around;
-            background-color: black;
-            color: white;
-            border-radius: 4px;
-            transition: 0.3s;
-        }
-
-
-
-        .card .picture{
-            position: relative;
-            float: left;
-            width: 48%;
-            height: 200px;
-            margin-bottom: 3%;
-            background-color: rgb(0, 0, 0);
-        }
-
-        .card .picture img{
-            position: relative;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-         .card .picture .overlay{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: 10;
-            opacity: 0;
-            line-height: 200px;
-            text-align: center;
-            background-color: rgb(0, 0, 0,0.8);
-            transition: 0.3s;
-            font-size: 20px;
-        }
-        .mapouter{
-               position:relative;
-               text-align:right;
-               height: 700px !important;
-               width:100%;
-        }
-
-
-        .column{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .row{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            
-        }
-
-
-
-       }
-
-        /* tablates */
-       @media (min-width: 768px) and (max-width: 1030px) { #overlay{ background-size: 40vw !important; }
-        .img{
-            position: fixed;
-           width: 100%;
-           height: 100%;
-           margin: 0px;
-           padding: 0px;
-           left: 0%;
-           top: 0px;
-           background-color: rgb(0, 0, 0);
-           background-image: url('bg.png');
-           background-position: center;
-           background-repeat: no-repeat;
-           background-size: contain;
-       }
-
-
-       .main{
-           position: fixed;
-           width: 90%;
-           padding:0px;
-           padding-top: 5%;
-           padding-left: 5%;
-           padding-right: 5%;
-           height: 95%;
-           margin: 0px;
-           left: 0px;
-           top: 0%;
-           z-index: 10;
-       }
-
-       .main .top{
-           position: relative;
-           width: 95%;
-           margin-right: 2.5%;
-           margin-left: 2.5%;
-           height: 70%;
-           float: left;
-           font-size: 60px;
-           margin-top: 2.5%; }/* EDITED BY AUTOMATION CODE */ 
-
-
-       .main .bottom{
-           position: relative;
-           width: 95%;
-           margin-right: 2.5%;
-           margin-left: 2.5%;
-           height: 10%;
-           margin-top: 10%;
-           margin-bottom: 10%;
-           float: left;
-           display: flex;
-           flex-direction: row;
-           justify-content: space-around;
-           font-size: 45px;
-       }
-
-       
-       .menu{
-            position: fixed;
-            top: 0px;
-            width: 100%;
-            height: 100%;
-            margin:0px;
-            padding: 0px;
-            background-color: rgba(255, 255, 255);
-            overflow-y: scroll;
-            z-index: 100;
-            display: none;
-
-        }
-
-
-       .card{
-         position: relative;
-         margin:0px;
-         width: 90%;
-         margin-left: 5%;
-         margin-right: 5%;
-         height: auto;
-         margin-top: 2.5%;
-         margin-bottom: 2.5%;
-         /* background-color: rgb(48, 48, 48); */
-         float: left;
-         display: inline-block; 
-        } 
-
-        .card label{
-            position: relative;
-            width: 100%;
-            float: left;
-            height: 25%;
-            margin-top: 5%;
-            font-size: 60px;
-            color: rgb(0, 0, 0);
-        }
-
-        .card p{
-            position: relative;
-            width: 100%;
-            float: left;
-            height: 60%;
-            margin-top: 5%;
-            font-size: 35px;
-            color: rgb(36, 36, 36);
-        }
-
-        .card p a{
-            font-size: 30px;
-            height: 130px;
-            width: 15%;
-            text-align: center;
-            display: flex;
-            justify-content: space-around;
-            background-color: black;
-            color: white;
-            border-radius: 4px;
-            transition: 0.3s;
-        }
-
-
-
-        .card .picture{
-            position: relative;
-            float: left;
-            width: 48%;
-            height: 500px;
-            margin-bottom: 3%;
-            background-color: rgb(0, 0, 0);
-        }
-
-        .card .picture img{
-            position: relative;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .card .picture .overlay{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: 10;
-            opacity: 0;
-            line-height: 500px;
-            text-align: center;
-            background-color: rgb(0, 0, 0,0.8);
-            transition: 0.3s;
-            font-size: 25px;
-        }
-
-        .mapouter{
-               position:relative;
-               text-align:right;
-               height: 900px !important;
-               width:100%;
-        }
-
-        .menu-btn{
-            position: fixed;
-           font-size: 35px;
-           top: 80px;
-           right: 50px;
-           cursor: pointer;
-           transition: 0.3s;
-           z-index: 110;
-           color: #797979;
-
-       }
-
-       .close-btn{
-            color: #797979;
-            transform: rotate(180deg);
-        }
-
-        .column{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .row{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            
-        }
-
-       }
-
-
-
-
-        
     </style>
 </head>
 <body>
-
     <div id="overlay"></div>
     <div id="overlay-1"></div>
-    <div id="overlay-2"></div>   
+    <div id="overlay-2"></div>
     </div>
-
-
-
-    <div class="img"> 
+    <div class="img">
     </div>
-
-    
     <div class="main">
         <div class="top">
-             <label>Name</label>  <br>is a great idea being built , wait for us
-             <span class="span-1">.</span>
-              <span class="span-2">.</span>
-              <span class="span-3">.</span>
+            <label>Name</label> <br>is a great idea being built , wait for us
+            <span class="span-1">.</span>
+            <span class="span-2">.</span>
+            <span class="span-3">.</span>
         </div>
-       <div class="bottom">
-
-       </div>
+        <div class="bottom">
+        </div>
     </div>
-     
     <div id="menu" class="menu">
-
-
         <div class="card">
-            <label> What is Name ?  </label>
+            <label> What is Name ? </label>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolore non laudantium doloribus sint commodi aspernatur esse, impedit neque consectetur, soluta et quae obcaecati, sapiente corrupti explicabo dolorem animi iusto!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolore non laudantium doloribus sint
+                commodi aspernatur esse, impedit neque consectetur, soluta et quae obcaecati, sapiente corrupti
+                explicabo dolorem animi iusto!
             </p>
         </div>
-
-
-
         <div class="card column">
             <div class="picture">
                 <div class="overlay"> Hello </div>
-                 <img src="../assets/ex-1.jpg" alt="" srcset="">
+                <img src="../assets/ex-1.jpg" alt="" srcset="">
             </div>
-    
             <div class="picture">
-             <div class="overlay"> Label </div>
-             <img src="../assets/ex-2.jpg" alt="" srcset="">
+                <div class="overlay"> Label </div>
+                <img src="../assets/ex-2.jpg" alt="" srcset="">
             </div>
-       </div>
-
-
-
-   
-
-       
-
-
+        </div>
         <div class="card row">
             <label>
                 Get in touch
             </label>
-
             <p class="column" style="height: auto !important;">
                 <a href="" class="row">
                     <i class="fab fa-twitter"></i>
-                  </a>
-                  
-                  <a href="" class="row">
-                    <i class="fab fa-instagram"></i>     
-                   </a>
-            
-
-                  <a href="" class="row">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-
-
+                </a>
                 <a href="" class="row">
-                    <i class="fab fa-whatsapp"></i>        
+                    <i class="fab fa-instagram"></i>
                 </a>
-
-
-            
-                  <a href="" class="row">
-                    <i class="fas fa-envelope"></i>      
+                <a href="" class="row">
+                    <i class="fab fa-facebook-f"></i>
                 </a>
-
-
+                <a href="" class="row">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="" class="row">
+                    <i class="fas fa-envelope"></i>
+                </a>
                 <a href="tel:123-456-7890" class="row">
-                    <i class="fas fa-phone-alt"></i>      
+                    <i class="fas fa-phone-alt"></i>
                 </a>
-
-                
             </p>
-       </div>
-
-
-
-
-
-
-       <div class="card">
-        <div class="mapouter">
-         <div class="gmap_canvas">
-            <iframe  id="gmap_canvas" src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-            <a href="https://www.embedgooglemap.org">google map embed with multiple locations</a>
         </div>
-           <style>
-            iframe{
-                position: relative;
-                width: 100%;
-                height: 100%;
-            }
-           .mapouter{
-               position:relative;
-               text-align:right;
-               height:100%;
-               width:100%;
-            }
-           .gmap_canvas {
-               overflow:hidden;
-               background:none !important;
-               height:100%;
-               width:100%;
-            }
-           </style>
+        <div class="card">
+            <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <a href="https://www.embedgooglemap.org">google map embed with multiple locations</a>
+                </div>
+                <style>
+                    iframe {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .mapouter {
+                        position: relative;
+                        text-align: right;
+                        height: 100%;
+                        width: 100%;
+                    }
+                    .gmap_canvas {
+                        overflow: hidden;
+                        background: none !important;
+                        height: 100%;
+                        width: 100%;
+                    }
+                </style>
+            </div>
         </div>
-    </div>
-
-
-
     </div>
     <i id="menu-btn" onclick="menu()" class="fas fa-bars menu-btn"></i>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
-<script>
-$("#overlay-2").fadeOut(1000);
-$(window).on('load', function() {
-        $('#overlay').fadeOut(2000,function(){
-        $('#overlay-1').fadeOut(2000);
-    });    $('#overlay').fadeOut(3000);   
-   
-});
-
-
-
-
-
-
-menu = () =>{
-
-    classes = document.getElementById("menu-btn").classList;
-
-    if(!classes.contains("close-btn")){
-        $(".menu").fadeIn();
-        classes.add('close-btn');   
-    }else{        
-        $(".menu").fadeOut();
-        classes.remove('close-btn');
-    }
-
-
-
-}
-
-</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script>
+        $("#overlay-2").fadeOut(1000);
+        $(window).on('load', function () {
+            $('#overlay').fadeOut(2000, function () {
+                $('#overlay-1').fadeOut(2000);
+            }); $('#overlay').fadeOut(3000);
+        });
+        menu = () => {
+            classes = document.getElementById("menu-btn").classList;
+            if (!classes.contains("close-btn")) {
+                $(".menu").fadeIn();
+                classes.add('close-btn');
+            } else {
+                $(".menu").fadeOut();
+                classes.remove('close-btn');
+            }
+        }
+    </script>
 </body>
 </html>
+<style>
+    :root{
+        --main-color: #797979;
+        --name-gradient-start-color: #797979;
+        --name-gradient-end-color:  #ffffff;
+    }
+</style>
